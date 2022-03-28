@@ -39,25 +39,23 @@ module.exports = {
         link: 'https://v1.vuepress.vuejs.org'
       }
     ],
-    sidebar: {
-      '/intro/': [
-        {
-          title: 'cs',
-          collapsable: true,
-          children: ['cs/intro']
-        },
-        {
-          title: 'fe',
-          collapsable: true,
-          children: ['fe/intro']
-        },
-        {
-          title: 'django',
-          collapsable: true,
-          children: ['django/intro']
-        }
-      ],
-    }
+    sidebar: [
+      {
+        title: 'cs',
+        collapsable: true,
+        children: ['cs/intro']
+      },
+      {
+        title: 'fe',
+        collapsable: true,
+        children: ['fe/intro']
+      },
+      {
+        title: 'django',
+        collapsable: true,
+        children: ['django/intro']
+      }
+    ],
   },
 
   /**
