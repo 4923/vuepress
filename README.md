@@ -16,3 +16,14 @@ vuepress 패키지를 설치하면 다른 패키지들도 설치 됨.
 3. yarn build
 docs 폴더 안의 마크다운을 html로 변환하는 작업을 vuepress 패키지에서 자동으로 작업
 그 결과물은 .vuepress 에 dist로 저장된다.
+링크도 자동으로 연결된다
+
+4. yarn dev
+build를 통해 dist하위에 생성된 html 파일들이 local host에서 실행된다.
+<img width="588" alt="image" src="https://user-images.githubusercontent.com/60145951/160387857-d7aebb15-6283-4b36-a219-5b09633bdee7.png">
+이곳에서 localhost로 이동하면 디폴트 문서들이 모인 Start page가 보인다.
+<img width="1624" alt="image" src="https://user-images.githubusercontent.com/60145951/160387904-24edbe9e-1cdf-456c-a127-42b8fcd3be65.png">
+- dist 안의 config, guide 내용이다.
+
+5. 이제꾸며보자
+index.md 부터 꾸미면 된다.
