@@ -1,7 +1,7 @@
 # vuepress
 
 ## 시작부터 배포까지
-> [@Parkjju와 함께하는 Vuepress 시작하기](https://parkjju.github.io/vue-TIL/vuepress/start.html#static-site-generator)
+> [@Parkjju](https://github.com/Parkjju)와 함께하는 [Vuepress 시작하기](https://parkjju.github.io/vue-TIL/vuepress/start.html#static-site-generator)
 
 ### 1. `yarn create vuepress-site`
 NOTE: 중간에 프로젝트 명은 관습에 따라 docs로 설정
@@ -22,7 +22,7 @@ build를 통해 dist하위에 생성된 html 파일들이 local host에서 실�
 
 이곳에서 localhost로 이동하면 디폴트 문서들이 모인 Start page가 보인다.  
 
-<img width="1624" alt="image" src="https://user-images.githubusercontent.com/60145951/160387904-24edbe9e-1cdf-456c-a127-42b8fcd3be65.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/60145951/160387904-24edbe9e-1cdf-456c-a127-42b8fcd3be65.png">
 
 아무것도 하지 않고 build할 경우 생성되는 것은 config, guide 내용이다.  
 앞으로도 html로 렌더링 된 결과값은 `./docs/.vuepress/dist` 에서 확인할 수 있다.
@@ -116,8 +116,50 @@ build한 결과물만 배포하면 되므로 `build` 하고
 - 1. cd docs로 docs에 이동
 - 2. sh deploy.sh 로 shell 파일 실행
 
-<img width="1460" alt="image" src="https://user-images.githubusercontent.com/60145951/160418929-ffb5e471-169a-4b59-b15e-9a48c00bbba6.png">
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/60145951/160418929-ffb5e471-169a-4b59-b15e-9a48c00bbba6.png">
 
 `gh-pages` branch에 가면 실제로 배포에 필요한 html 파일들만 올라간 것을 확인 할 수 있다. 우측의 `github-pages` 에서 github action 의 현재 상태를 볼 수 있는데 상단 이미지는 올라가고있는 상태! 를 말한다.
 
+> [https://4923.github.io/vuepress/](https://4923.github.io/vuepress/) 에서 배포된 결과를 확인할 수 있다.
+
+
+## 신기하고 재미있는 것들
+
+### 배포 자동화: github action
+> [Github Action 활용하기](https://parkjju.github.io/vue-TIL/git/GA.html#github-action%E1%84%8B%E1%85%B3%E1%86%AF-%E1%84%92%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%84%80%E1%85%A6-%E1%84%83%E1%85%AC%E1%86%AB-%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%B2)
+
+1. root에 `.github/workflows/` 폴더를 생성
+2. 이름은 별 관계 없지만 `main.yml` 파일 생성 후 아래 내용 복붙 ([source code](https://github.com/4923/vuepress/blob/30ec39f1e4c9572ceaae67ecd50c0ae38086be37/.github/workflows/main.yml)) 
+    ```yml
+    '''
+    필요하다면 공식문서 참조 할 것
+    '''
+
+    name: Build and Deploy      # name: github action의 이름
+    on: [push]      # trigger가 되는 event: git의 여러 이벤트 중 (add, commit, push ...) github action을 발동시키는 조건은 무엇인가
+    jobs:       # github action 은 여러가지 job으로 이루어져 있는데, 그 내용은 아래와 같다.
+        build-and-deploy:
+            runs-on: ubuntu-latest      # jobs가 실행되는 환경
+            steps:      # build 과정을 자동화 하고 싶은것이니, build를 하는 repo에서 기능을 가져온다
+                - name: Checkout
+                uses: actions/checkout@master
+
+                - name: vuepress-deploy
+                uses: jenkey2011/vuepress-deploy@master   # '그' repo
+                env:      # github action에 사용되는 환경변수
+                    ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+                    TARGET_BRANCH: gh-pages
+                    BUILD_SCRIPT: yarn && yarn build
+                    BUILD_DIR: docs/.vuepress/dist
+    ```
+3. Workflow 설정을 위한 Personal Token을 발급받는다.
+    - github -> settings -> developer settings -> personal access tokens -> generate new token
+    - 두번째 항목 `workflow`에 체크하고 발급받을 것
+    - 만료기한은 따로 정해두지 않아도 된다. (잘 관리한다면)
+4. 발급받은 토큰을 repo에 입력한다.
+    - repo settings -> secrets/actions -> new repository secrets -> value에 발급받은 토큰 입력
+5. 이제 add commit push로 배포 가능해졌다. 이전에 설정해 둔 `deploy.sh` 는 쓰지 않아도 된다!
+
+발생할 수 있는 이슈: 
+- [macos 에서 login용 token을 발급해서 쓰고 있다면](https://github.com/4923/vuepress/issues/3)
 
