@@ -4,11 +4,12 @@ module.exports = {
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#title
    */
-  title: 'Vuepress Docs Boilerplate',
+  title: '4923.py',
   /**
    * Ref：https://v1.vuepress.vuejs.org/config/#description
    */
   description: description,
+  base: '/vuepress/',
 
   /**
    * Extra tags to be injected to the page HTML `<head>`
@@ -47,14 +48,21 @@ module.exports = {
       }
     ],
     sidebar: {
-      '/guide/': [
+      '/intro/': [
         {
-          title: 'Guide',
-          collapsable: false,
-          children: [
-            '',
-            'using-vue',
-          ]
+          title: 'CS',
+          collapsable: true,
+          children: ['CS/intro']
+        },
+        {
+          title: 'FE',
+          collapsable: true,
+          children: ['FE/intro']
+        },
+        {
+          title: 'Django',
+          collapsable: true,
+          children: ['Django/intro']
         }
       ],
     }

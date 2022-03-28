@@ -3,13 +3,13 @@ home: true
 heroImage: https://v1.vuepress.vuejs.org/hero.png
 tagline: 
 actionText: Quick Start →
-actionLink: /guide/
+actionLink: /intro
 features:
-- title: Feature 1 Title
-  details: Feature 1 Description
-- title: Feature 2 Title
-  details: Feature 2 Description
-- title: Feature 3 Title
-  details: Feature 3 Description
+- title: Feature 1 CS
+  details: Computer Science
+- title: Feature 2 FE
+  details: Web Front-End
+- title: Feature 3 Django
+  details: Django Framework
 footer: Made by  with ❤️
 ---
