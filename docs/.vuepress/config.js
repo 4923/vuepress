@@ -35,14 +35,6 @@ module.exports = {
     lastUpdated: false,
     nav: [
       {
-        text: 'Guide',
-        link: '/guide/',
-      },
-      {
-        text: 'Config',
-        link: '/config/'
-      },
-      {
         text: 'VuePress',
         link: 'https://v1.vuepress.vuejs.org'
       }
@@ -50,19 +42,19 @@ module.exports = {
     sidebar: {
       '/intro/': [
         {
-          title: 'CS',
+          title: 'cs',
           collapsable: true,
-          children: ['CS/intro']
+          children: ['cs/intro']
         },
         {
-          title: 'FE',
+          title: 'fe',
           collapsable: true,
-          children: ['FE/intro']
+          children: ['fe/intro']
         },
         {
-          title: 'Django',
+          title: 'django',
           collapsable: true,
-          children: ['Django/intro']
+          children: ['django/intro']
         }
       ],
     }
