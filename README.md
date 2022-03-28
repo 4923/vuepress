@@ -164,8 +164,11 @@ build한 결과물만 배포하면 되므로 `build` 하고
     - [macos 에서 login용 token을 발급해서 쓰고 있는데 remote reject 오류가 발생한다면](https://github.com/4923/vuepress/issues/3)
 
 
-### plugin: PWA
-> [@Parkjju](https://github.com/Parkjju)와 함께하는 [pwa알아보기](https://parkjju.github.io/vue-TIL/vuepress/pwa.html)
+### plugin: PWA, Progressive Web App
+- 참고  
+    - [pwa알아보기](https://parkjju.github.io/vue-TIL/vuepress/pwa.html)
+    - [vuejs.org](https://vuepress.vuejs.org/plugin/official/plugin-pwa.html)
+    - [Tutorial. 뷰프레스(Vuepress)로 기술문서 빠르게 만들어보자!](https://limdongjin.github.io/vuejs/vuepress/#config파일에-플러그인-등록)
 
 PWA가 브라우저와 다른 점? == native만의 장점: offline에서도 돌아간다.
 - `service worker`: background에서 돌아가면서 새로운 글이 올라왔을 때 팝업이 올라온다.
@@ -181,20 +184,80 @@ PWA가 브라우저와 다른 점? == native만의 장점: offline에서도 돌�
     ```sh
     yarn add -D @vuepress/plugin-pwa
     ```
-2. plugin 등록
+2. config.json에 plugin 등록
+    ```js
+    // docs/.vuepress/config.js
+    module.exports = {
+        // ...
+        head: [
+            ['link', { rel: 'icon', href: `/images/logo-144.png` }],
+            ['link', { rel: 'manifest', href: '/manifest.json' }]
+        ],
+        plugins: [
+            ['@vuepress/pwa', {
+                serviceWorker: true,
+                updatePopup: true
+            }]
+        ]
+    }
+    ```
     - `.vuepress/public/` 생성
 3. `manifest.json` 추가
+    - 설치 경로: `.vuepress/public/manifest.json`
     - 간단한 설명
         - name: 앱 이름
         - short name: 최초 실행시 2초정도 보여주는 splash view에서 pavicon과 함께 보여주는 화면의 이름
         - (중요) start_url: 시작 위치!
         - icons: 다양한 환경에 맞춰 여러가지를 정의
     - process
-        1. `manifest.json` 안에 코드 입력 ([source code]())
+        1. `manifest.json` 안에 코드 입력 ([source code](https://github.com/4923/vuepress/blob/main/docs/.vuepress/public/manifest.json))
         2. 이미지가 실제로 있어야 하므로: publics/images/ 생성 후 이미지 추가
             - publics에 이미지를 모은다.
+            - 이미지 형식은 `png` 여야 한다. (<s>NOT jpg</s>)
         3. (중요) `config.js` 의 head에 manifest.json을 입력
             - module.exports가 중괄호로 감싸져있는데, 이 때 head가 html의 head 태그와 비슷하다.
-            - 이미지 형식은 `png` 여야 한다. (<s>NOT jpg</s>)
+            - <details><summary>source code</summary>
 
-`추가예정... Loading`
+                ```js
+                // config.js
+                head: [
+                    ["link", { rel: "shortcut icon", href: "./favicon.ico" }],
+                    ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
+                    ["link", { rel: "manifest", href: "./manifest.json" }],
+                    [
+                    "link",
+                    {
+                        rel: "apple-touch-icon",
+                        sizes: "192x192",
+                        href: "images/maskable_icon_x192.png",
+                    },
+                    ],
+                    [
+                    "meta",
+                    { name: "apple-mobile-web-app-status-bar-style", content: "black" },
+                    ],
+                ],
+                ```
+
+                </details>
+
+### CMS & forestry
+1. 가입  
+NOTE: branch는 gh-pages가 아니라 `main` 으로!
+
+    <img width="200" alt="image" src="https://user-images.githubusercontent.com/60145951/160414667-d6d7f289-c237-468c-aa73-e35e4b9b8252.png">
+
+2. local에서 `.forestry` 폴더 생성
+3. pull: forestry가 연결되면 자동으로 default configuration 파일을 생성하므로 pull
+4. `.forestry/settings.yml` 수정
+    - 복사, 붙여넣기 하는데 이 때 'sections' 수정 할 것
+    - 작성하는 문서 폴더를 sections에 설정해두면 생성한 이걸 API로 가져와서 forestry에서 보여준다.
+    - path: 경로 주의
+    - label: 사이드바에 '어떻게 표시 할 것인지'를 결정하므로 굳이 똑같지 않아도 된다.
+4.  add - commit - push
+    
+
+### GA
+> Google Analytics 적용하기
+
+`추가 예정`
