@@ -126,7 +126,7 @@ build한 결과물만 배포하면 되므로 `build` 하고
 ## 신기하고 재미있는 것들
 
 ### 배포 자동화: github action
-> [Github Action 활용하기](https://parkjju.github.io/vue-TIL/git/GA.html#github-action%E1%84%8B%E1%85%B3%E1%86%AF-%E1%84%92%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%84%80%E1%85%A6-%E1%84%83%E1%85%AC%E1%86%AB-%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%B2)
+> [@Parkjju](https://github.com/Parkjju)와 함께하는 [Github Action 활용하기](https://parkjju.github.io/vue-TIL/git/GA.html#github-action%E1%84%8B%E1%85%B3%E1%86%AF-%E1%84%92%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%84%80%E1%85%A6-%E1%84%83%E1%85%AC%E1%86%AB-%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%B2)
 
 1. root에 `.github/workflows/` 폴더를 생성
 2. 이름은 별 관계 없지만 `main.yml` 파일 생성 후 아래 내용 복붙 ([source code](https://github.com/4923/vuepress/blob/30ec39f1e4c9572ceaae67ecd50c0ae38086be37/.github/workflows/main.yml)) 
@@ -160,6 +160,6 @@ build한 결과물만 배포하면 되므로 `build` 하고
     - repo settings -> secrets/actions -> new repository secrets -> value에 발급받은 토큰 입력
 5. 이제 add commit push로 배포 가능해졌다. 이전에 설정해 둔 `deploy.sh` 는 쓰지 않아도 된다!
 
-발생할 수 있는 이슈: 
-- [macos 에서 login용 token을 발급해서 쓰고 있다면](https://github.com/4923/vuepress/issues/3)
+- 발생할 수 있는 이슈
+    - [macos 에서 login용 token을 발급해서 쓰고 있는데 remote reject 오류가 발생한다면](https://github.com/4923/vuepress/issues/3)
 
