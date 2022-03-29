@@ -54,19 +54,19 @@ module.exports = {
     sidebar: [
       '/intro.md/',
       {
-        title: 'cs',
+        title: 'CS',
         collapsable: true,
-        children: ['cs/intro']
+        children: ['CS/intro']
       },
       {
-        title: 'fe',
+        title: 'FE',
         collapsable: true,
-        children: ['fe/intro']
+        children: ['FE/intro']
       },
       {
-        title: 'django',
+        title: 'Django',
         collapsable: true,
-        children: ['django/intro']
+        children: ['Django/intro']
       }
     ],
   },
