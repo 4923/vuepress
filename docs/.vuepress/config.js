@@ -17,9 +17,9 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/config/#head
    */
   head: [
-    ["link", { rel: "shortcut icon", href: "./favicon.ico" }],
+    ["link", { rel: "shortcut icon", href: "/favicon.ico" }],
     ["meta", { name: "apple-mobile-web-app-capable", content: "yes" }],
-    ["link", { rel: "manifest", href: "./manifest.json" }],
+    ["link", { rel: "manifest", href: "/manifest.json" }],
     [
       "link",
       {
@@ -77,7 +77,7 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
-    ["@vuepress/pwa",
+    ['@vuepress/pwa',
       {
         serviceWorker: true,
         updatePopup: {
