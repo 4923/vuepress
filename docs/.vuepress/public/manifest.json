@@ -1,7 +1,7 @@
 {
-    "name": "Parkjju's TIL",
-    "short_name": "Parkjju's TIL",
-    "start_url": "/vue-TIL/",
+    "name": "4923.py",
+    "short_name": "4923.py",
+    "start_url": "/vuepress/",
     "icons": [
         {
             "src": "images/maskable_icon_x48.png",
