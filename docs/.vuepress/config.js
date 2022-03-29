@@ -52,6 +52,7 @@ module.exports = {
       }
     ],
     sidebar: [
+      '/intro.md/',
       {
         title: 'cs',
         collapsable: true,
