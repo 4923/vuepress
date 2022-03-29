@@ -4,15 +4,37 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections: 
-upload_dir: uploads
-public_path: "/uploads"
+- type: directory
+  path: docs/CS
+  label: CS
+  create: documents
+  match: "*.md"
+  templates:
+  - post
+- type: directory
+  path: docs/FE
+  label: FE
+  create: documents
+  match: "*.md"
+  templates:
+  - post
+- type: directory
+  path: docs/Django
+  label: Django
+  create: documents
+  match: "*.md"
+  templates:
+  - post
+
+upload_dir: docs/.vuepress/assets
+public_path: "../.vuepress/assets"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
 build:
-  preview_output_directory: ".vuepress/dist"
+  preview_output_directory: docs/.vuepress/dist
   install_dependencies_command: npm install
   preview_docker_image: forestryio/node:12
   mount_path: "/srv"
   working_dir: "/srv"
-  instant_preview_command: npm run develop
+  instant_preview_command: npm run build && npm run dev
