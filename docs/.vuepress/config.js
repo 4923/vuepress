@@ -77,13 +77,16 @@ module.exports = {
   plugins: [
     '@vuepress/plugin-back-to-top',
     '@vuepress/plugin-medium-zoom',
-    ['@vuepress/pwa',
+    [
+      '@vuepress/pwa',
       {
         serviceWorker: true,
         updatePopup: {
           message: "새 컨텐츠가 등록되었습니다. 새로고침 버튼을 눌러주세요😀",
           buttonText: "새로고침",
         },
-      }],
+      }
+    ],
+    "@vuepress/last-updated",
   ]
 }
