@@ -2,6 +2,8 @@
 title: FE stack을 쌓읍시다
 ---
 
-## 사이드바 제목 1
+## HTML/CSS를 알아봅시다.
+CSS는 어렵다.
 
-## 사이드바 제목 2
+## JS를 합시다.
+BANANA!
