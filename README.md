@@ -301,9 +301,10 @@ UA-000000 와 GA- 로 시작하는 코드는 사용할 수 없다.
 
 1. [Google Analytics](https://analytics.google.com/analytics/web/provision/#/provision) 에서 구글 계정으로 로그인하고, start measuring 으로 가입 절차로 진입한다.
     <img width="500" alt="image" src="https://user-images.githubusercontent.com/60145951/164174494-f5c4d3ee-988d-4f78-8a9a-732ce357579d.png">
-
 2. 계정명을 등록한다. ([참고](https://62che.com/blog/vuepress/Google-Analytics-연동하기.html#google-analytics-가입하기))
+
     <img width="500" alt="image" src="https://user-images.githubusercontent.com/60145951/164175158-567fb7a2-6b33-434d-8206-a7d468e1e197.png">
+
     > NOTE! 가능하면 계정명을 vuepress 블로그명 등, 페이지를 총칭하는 이름으로 짓도록 하자. 하위 페이지까지 `Account Name` 으로 묶여서 관리되기 때문.  
 
     > 이 repo의 경우 레포이름이 `vuepress` 이므로 `Account Name` 도 `vuepress` 로 지정했다.
@@ -326,11 +327,11 @@ UA-000000 와 GA- 로 시작하는 코드는 사용할 수 없다.
     1. 좌측 햄버거 메뉴 하단에서 Data Stream 선택 후
     2. 우측에서 우리의 타겟인 Web 을 선택하고
     3. 이동된 페이지에서 추적을 원하는 웹페이지 주소를 입력한다.
-    <img width="500" alt="image" src="https://user-images.githubusercontent.com/60145951/164179616-85032a5e-437f-4fa9-96b1-50cac3f7643c.png">
+        <img width="500" alt="image" src="https://user-images.githubusercontent.com/60145951/164179616-85032a5e-437f-4fa9-96b1-50cac3f7643c.png">
     4. 이후 `Create Stream` 으로 Data Stream 을 추가한다.
-    <img width="500" alt="image" src="https://user-images.githubusercontent.com/60145951/164179733-db2ea032-8aa3-48f7-aded-7c1cef73b12f.png">
+        <img width="500" alt="image" src="https://user-images.githubusercontent.com/60145951/164179733-db2ea032-8aa3-48f7-aded-7c1cef73b12f.png">
     5. 여기에서 나온 `MEASUREMENT ID` 를 잘 저장해둔다. 이후에 플러그인을 등록할 때 사용하게 될 것이다.
-    <img width="500" alt="image" src="https://user-images.githubusercontent.com/60145951/164180322-fd09bb05-dc22-4250-b0d0-0c4b3cff6758.png">
+        <img width="500" alt="image" src="https://user-images.githubusercontent.com/60145951/164180322-fd09bb05-dc22-4250-b0d0-0c4b3cff6758.png">
 
 
 ### 5.3 플러그인 등록 (GA4)
