@@ -1,7 +1,9 @@
 ---
 title: 전공 공부를 합시다
+
 ---
 ## build test
+## CMS 페이지 생성: forestry test
 
 ## 자료구조
 자료구조를 배웁시다.

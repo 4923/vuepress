@@ -3,7 +3,7 @@ new_page_extension: md
 auto_deploy: false
 admin_path: 
 webhook_url: 
-sections: 
+sections:
 - type: directory
   path: docs/CS
   label: CS
@@ -25,7 +25,6 @@ sections:
   match: "*.md"
   templates:
   - post
-
 upload_dir: docs/.vuepress/assets
 public_path: "../.vuepress/assets"
 front_matter_path: ''
