@@ -28,10 +28,22 @@ module.exports = {
         href: "images/maskable_icon_x192.png",
       },
     ],
+
+    // Status Bar
     [
       "meta",
       { name: "apple-mobile-web-app-status-bar-style", content: "black" },
     ],
+
+    // GA
+    [
+      "script",
+      {
+        async: true,
+        src: "https://www.googletagmanager.com/gtag/js?id=G-35584GW730",
+      },
+    ],
+    ["script", {}, ["window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-35584GW730');"]],
   ],
 
   /**
