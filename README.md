@@ -1,62 +1,60 @@
-# vuepress
-
 - [vuepress](#vuepress)
-  * [1. 시작부터 배포까지](#1----------)
-    + [1.1 `yarn create vuepress-site`](#11--yarn-create-vuepress-site-)
-    + [1.2 `yarn add -D vuepress`](#12--yarn-add--d-vuepress-)
-    + [1.3 `yarn build`: markdown으로 html을 생성한다.](#13--yarn-build---markdown---html------)
-    + [1.4 `yarn dev`: local server를 실행한다.](#14--yarn-dev---local-server------)
-    + [1.5 게시글을 작성하고 블로그를 꾸민다.](#15-------------------)
-    + [1.6 `.vuepress/config.js`에서 '내가 이런 파일을 만들었다' 는걸 vuepress에 알려준다.](#16--vuepress-configjs------------------------vuepress------)
-    + [1.7 docs 하위에 첫 페이지가 될 md를 생성한다.](#17-docs--------------md------)
-    + [1.8 landing page와 blog page를 연결한다](#18-landing-page--blog-page------)
-    + [1.9 배포할 파일을 만든다. (build, dev)](#19--------------build--dev-)
-    + [1.10 landing page URL인 base 링크를 설정한다.](#110-landing-page-url--base---------)
-    + [1.11 배포한다.](#111-----)
-  * [신기하고 재미있는 것들](#------------)
-  * [2. CI/CD: Github Action으로 배포 자동화하기](#2-ci-cd--github-action-----------)
-    + [2.1 root에 `.github/workflows/` 폴더를 생성한다.](#21-root---github-workflows-----------)
-    + [2.2 배포를 자동화해주는 `main.yml` 파일을 생성한다.](#22-------------mainyml----------)
-    + [2.3 Workflows 설정을 위한 Personal Token을 발급받는다.](#23-workflows--------personal-token-------)
-    + [2.4 발급받은 토큰을 repo에 입력한다.](#24----------repo------)
-    + [2.5 이제 add commit push로 배포 가능해졌다.](#25----add-commit-push----------)
-  * [여기까지 발생할 수 있는 이슈](#----------------)
-  * [3. Plugin: PWA, Progressive Web App](#3-plugin--pwa--progressive-web-app)
-    + [3.1 pwa를 위한 plugin 설치](#31-pwa-----plugin---)
-    + [3.2 config.json에 plugin 등록](#32-configjson--plugin---)
-    + [3.3 이미지를 추가하기 위해 `.vuepress/public/` 생성](#33---------------vuepress-public-----)
-    + [3.4 `manifest.json` 추가](#34--manifestjson----)
-  * [4. CMS & forestry](#4-cms---forestry)
-    + [4.1 가입](#41---)
-    + [4.2 local에서 `.forestry` 폴더 생성](#42-local----forestry-------)
-    + [4.3 pull: forestry가 연결되면 자동으로 default configuration 파일을 생성하므로 pull](#43-pull--forestry------------default-configuration-----------pull)
-    + [4.4 `.forestry/settings.yml` 수정](#44--forestry-settingsyml----)
-    + [4.5 `add - commit - push` 로 배포](#45--add---commit---push------)
-  * [5. Plugin: GA](#5-plugin--ga)
-    + [5.1 plugin 설치](#51-plugin---)
-    + [5.2 GA 코드 발급](#52-ga------)
-    + [5.3 플러그인 등록 (GA4)](#53----------ga4-)
-    + [5.4 GA 확인](#54-ga---)
+  * [1. 시작부터 배포까지](#1-시작부터-배포까지)
+    + [1.1 yarn create vuepress-site](#11-yarn-create-vuepress-site)
+    + [1.2 yarn add -D vuepress](#12-yarn-add--d-vuepress)
+    + [1.3 yarn build: markdown으로 html을 생성한다.](#13-yarn-build-markdown으로-html을-생성한다)
+    + [1.4 yarn dev: local server를 실행한다.](#14-yarn-dev-local-server를-실행한다)
+    + [1.5 게시글을 작성하고 블로그를 꾸민다.](#15-게시글을-작성하고-블로그를-꾸민다)
+    + [1.6 .vuepress/config.js에서 '내가 이런 파일을 만들었다' 는걸 vuepress에 알려준다.](#16-vuepressconfigjs-에서-내가-이런-파일을-만들었다-는걸-vuepress에-알려준다)
+    + [1.7 docs 하위에 첫 페이지가 될 md를 생성한다.](#17-docs-하위에-첫-페이지가-될-md를-생성한다)
+    + [1.8 landing page와 blog page를 연결한다](#18-landing-page와-blog-page를-연결한다)
+    + [1.9 배포할 파일을 만든다. (build, dev)](#19-배포할-파일을-만든다-build-dev)
+    + [1.10 landing page URL인 base 링크를 설정한다.](#110-landing-page-url인-base-링크를-설정한다)
+    + [1.11 배포한다.](#111-배포한다)
+  * [신기하고 재미있는 것들](#신기하고-재미있는-것들)
+  * [2. CI/CD: Github Action으로 배포 자동화하기](#2-cicd-github-action으로-배포-자동화하기)
+    + [2.1 root에 .github/workflows/ 폴더를 생성한다.](#21-root에-githubworkflows-폴더를-생성한다)
+    + [2.2 배포를 자동화해주는 main.yml 파일을 생성한다.](#22-배포를-자동화해주는-mainyml-파일을-생성한다)
+    + [2.3 Workflows 설정을 위한 Personal Token을 발급받는다.](#23-workflows-설정을-위한-personal-token을-발급받는다)
+    + [2.4 발급받은 토큰을 repo에 입력한다.](#24-발급받은-토큰을-repo에-입력한다)
+    + [2.5 이제 add commit push로 배포 가능해졌다.](#25-이제-add-commit-push로-배포-가능해졌다)
+  * [여기까지 발생할 수 있는 이슈](#여기까지-발생할-수-있는-이슈)
+  * [3. Plugin: PWA, Progressive Web App](#3-plugin-pwa-progressive-web-app)
+    + [3.1 pwa를 위한 plugin 설치](#31-pwa를-위한-plugin-설치)
+    + [3.2 config.json에 plugin 등록](#32-configjson에-plugin-등록)
+    + [3.3 이미지를 추가하기 위해 .vuepress/public/ 생성](#33-이미지를-추가하기-위해-vuepresspublic-생성)
+    + [3.4 manifest.json 추가](#34-manifestjson-추가)
+  * [4. CMS & forestry](#4-cms--forestry)
+    + [4.1 가입](#41-가입)
+    + [4.2 local에서 .forestry 폴더 생성](#42-local에서-forestry-폴더-생성)
+    + [4.3 pull: forestry가 연결되면 자동으로 default configuration 파일을 생성하므로 pull](#43-pull-forestry가-연결되면-자동으로-default-configuration-파일을-생성하므로-pull)
+    + [4.4 .forestry/settings.yml 수정](#44-forestrysettingsyml-수정)
+    + [4.5 add - commit - push 로 배포](#45-add---commit---push-로-배포)
+  * [5. Plugin: GA](#5-plugin-ga)
+    + [5.1 plugin 설치](#51-plugin-설치)
+    + [5.2 GA 코드 발급](#52-ga-코드-발급)
+    + [5.3 플러그인 등록 (GA4)](#53-플러그인-등록-ga4)
+    + [5.4 GA 확인](#54-ga-확인)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+# vuepress
 
 ## 1. 시작부터 배포까지
 > [@Parkjju](https://github.com/Parkjju)와 함께하는 [Vuepress 시작하기](https://parkjju.github.io/vue-TIL/vuepress/start.html#static-site-generator)
 
-### 1.1 `yarn create vuepress-site`
+### 1.1 yarn create vuepress-site
 NOTE: 중간에 프로젝트 명은 관습에 따라 docs로 설정
 
-### 1.2 `yarn add -D vuepress`
+### 1.2 yarn add -D vuepress
 NOTE: 현재 위치에 `package.json`이 있어야 인식 가능
 - `-D` 옵션은?
     - vuepress가 완전히 독립적인 패키지가 아니라 vuepress 패키지를 설치하면 다른 패키지들도 설치 됨. 그 설치가 된 결과물이 dependencies로 정리된다.
     - `-D` 옵션은 개발자를 위한 옵션 (-dev) : 개발자가 효율적으로 개발할 수 있게 하는 옵션. 이거 없이 하는건 사용자에게 편리하게!
 
-### 1.3 `yarn build`: markdown으로 html을 생성한다.
+### 1.3 yarn build: markdown으로 html을 생성한다.
 build는 docs 폴더 안의 마크다운을 html로 변환하는 작업을 vuepress 패키지에서 자동으로 작업하는 것. 그 결과물은 .vuepress 에 dist로 저장된다. 링크도 자동으로 연결되니 편하다.
 - 실제로 배포되는 파일은 이 `/dist/` 하위에 모여있다.
 
-### 1.4 `yarn dev`: local server를 실행한다.
+### 1.4 yarn dev: local server를 실행한다.
 build를 통해 dist하위에 생성된 html 파일들이 local host에서 실행된다. django의 runserver처럼 localhost로 이동하면 디폴트 문서들이 모인 Start page가 보인다.  
   
 
@@ -79,7 +77,7 @@ title: blahblahblah
 > 기본 md 처럼 # 하나만 붙이면 좌측 사이드바에서 인식을 못하므로 두개를 붙여주자.
 ```
 
-### 1.6 `.vuepress/config.js`에서 '내가 이런 파일을 만들었다' 는걸 vuepress에 알려준다.
+### 1.6 .vuepress/config.js 에서 '내가 이런 파일을 만들었다' 는걸 vuepress에 알려준다.
 ```js
 {
     title: 'CS',
@@ -182,9 +180,10 @@ cd -
 ## 2. CI/CD: Github Action으로 배포 자동화하기
 > [@Parkjju](https://github.com/Parkjju)와 함께하는 [Github Action 활용하기](https://parkjju.github.io/vue-TIL/git/GA.html#github-action%E1%84%8B%E1%85%B3%E1%86%AF-%E1%84%92%E1%85%AA%E1%86%AF%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%92%E1%85%A1%E1%84%80%E1%85%A6-%E1%84%83%E1%85%AC%E1%86%AB-%E1%84%8B%E1%85%B5%E1%84%8B%E1%85%B2)
 
-### 2.1 root에 `.github/workflows/` 폴더를 생성한다.
-Github의 workflows 기능을 사용할 것이다.
-### 2.2 배포를 자동화해주는 `main.yml` 파일을 생성한다. 
+### 2.1 root에 .github/workflows/ 폴더를 생성한다.
+- Github의 workflows 기능을 사용할 것이다.
+- `workflows` 임에 주의하자. 오타는 항상 주의.
+### 2.2 배포를 자동화해주는 main.yml 파일을 생성한다. 
 생성 후 [source code](https://github.com/4923/vuepress/blob/30ec39f1e4c9572ceaae67ecd50c0ae38086be37/.github/workflows/main.yml)의 내용을 복사, 붙여넣기한다. 이 때 yml 파일 이름은 무엇으로 해도 관계없다.
 
 ```yml
@@ -266,9 +265,9 @@ module.exports = {
     ]
 }
 ```
-### 3.3 이미지를 추가하기 위해 `.vuepress/public/` 생성
+### 3.3 이미지를 추가하기 위해 .vuepress/public/ 생성
 
-### 3.4 `manifest.json` 추가
+### 3.4 manifest.json 추가
 - 설치 경로: `.vuepress/public/manifest.json`
 - 간단한 설명
     - name: 앱 이름
@@ -318,7 +317,7 @@ NOTE: branch는 gh-pages가 아니라 `main` 으로!
     - 작성하는 문서 폴더를 sections에 설정해두면 생성한 이걸 API로 가져와서 forestry에서 보여준다.
     - path: 경로 주의
     - label: 사이드바에 '어떻게 표시 할 것인지'를 결정하므로 굳이 똑같지 않아도 된다.
-### 4.5 `add - commit - push` 로 배포
+### 4.5 add - commit - push 로 배포
     
 <img width="1492" alt="image" src="https://user-images.githubusercontent.com/60145951/160599469-a4466d8e-a46b-4a65-ba2a-66e0f902bd67.png">
 
