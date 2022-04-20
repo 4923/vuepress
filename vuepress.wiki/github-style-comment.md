@@ -65,6 +65,10 @@
 </template>
 <script>
 // https://kyounghwan01.github.io/blog/Vue/vuepress/vuepress-github-comment/#댓글-컴포넌트-추가
+<template>
+  <div ref="comment"></div>
+</template>
+<script>
 export default {
   mounted() {
     // script tag 생성
@@ -75,6 +79,7 @@ export default {
     utterances.src = "https://utteranc.es/client.js";
 
     utterances.setAttribute("issue-term", "pathname"); // pathname|url|title|og:title 중 택 1
+    utterances.setAttribute("label", "Comment💬"); // comment와 관련된 issue가 생성되었을 때 붙일 label, 실제 repo에 존재하는 label이어야 한다.
     utterances.setAttribute("theme", "github-light"); // theme 설정 (github-light, github-dark, preferred-color-scheme, github-dark-orange, icy-dark, dark-blue, photon-dark, boxy-light) 중 하나 선택
     utterances.setAttribute("repo", `4923/vuepress`); // 주의!! 사용할 repository
 
@@ -86,11 +91,6 @@ export default {
 ```
 
 위의 원본 코드와 잘 비교해보면 주요한 요소 (src, repo, issue-term, label, theme, crossorigin) 는 대부분 포함되어 있는 것을 알 수 있는데 `utterance.` 와 `utterances.setAttribute("~", "")` 로 나눈 이유를 모르겠다.
-
-```js
-    utterances.setAttribute("label", "Comment💬");
-```
-
 우선 Comment가 달린 issue에 붙일 Label을 설정해주고 게시글을 작성하고 포스팅의 마지막에 `<Comment />` 를 추가하면 댓글이 생긴다.
 
 ```markdown
