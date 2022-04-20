@@ -8,4 +8,5 @@ Welcome to the vuepress wiki!
 - :heavy_check_mark: Plugin: GA ([Google Analytics](https://github.com/4923/vuepress/wiki/google-analytics))
 
 > Customed Features
-- :octocat: Comment by github issue comment system ([github-style-comment](https://github.com/4923/vuepress/wiki/github-style-comment)
+- :canvas: applying open source vuepress theme ([vuepress-theme](https://github.com/4923/vuepress/wiki/vuepress-theme))
+- :octocat: Comment by github issue comment system ([github-style-comment](https://github.com/4923/vuepress/wiki/github-style-comment))
