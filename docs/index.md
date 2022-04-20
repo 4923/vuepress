@@ -1,15 +1,8 @@
 ---
 home: true
-heroImage: https://v1.vuepress.vuejs.org/hero.png
-tagline: 
-actionText: Quick Start →
+title: Hello, World.
+description: Not sure where to start? We’ve put together some handy guides and reference documentation you can use to start building.
+actionText: Getting Started
 actionLink: /intro
-features:
-- title: Feature 1 CS
-  details: Computer Science
-- title: Feature 2 FE
-  details: Web Front-End
-- title: Feature 3 Django
-  details: Django Framework
-footer: Made by  with ❤️
+footer: Open Source on [GitHub](https://github.com/sqrthree/vuepress-theme-api), Made by [@sqrthree](https://github.com/sqrthree), Power by [vuepress](https://github.com/vuejs/vuepress).
 ---
