@@ -46,11 +46,13 @@ module.exports = {
     ["script", {}, ["window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-35584GW730');"]],
   ],
 
+
   /**
    * Theme configuration, here is the default theme configuration for VuePress.
    *
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
+  theme: 'vuepress-theme-api',  // https://github.com/sqrthree/vuepress-theme-api
   themeConfig: {
     repo: '',
     editLinks: false,
