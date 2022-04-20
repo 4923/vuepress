@@ -58,14 +58,8 @@
 ### 3. 댓글 컴포넌트 삽입
 > [주요 참고: 기억보다 기록을 blog](https://kyounghwan01.github.io/blog/Vue/vuepress/vuepress-github-comment/)
 
-그런데 2.4에서 작성된 코드를 그대로 적으면 문제가 생기는지 참고 블로그에서는 조금 다른 코드를 제시했다. 
-
-아래 코드는 `.vuepress/theme/Comment.vue` 파일로 `global-components`라고 한다. VuePress Post에 직접적으로 `<script>` 태그를 직접적으로 추가할 수 없어 대안적으로 생성한 파일이다. 
-
-이 `global-components`는 또 `theme`의 기능이기 때문에 theme 마다 적용하는 방식이 다르다.
-
 ```vue
-<!-- vuepress/docs/.vuepress/theme/Comment.vue 생성 -->
+<!-- vuepress/docs/.vuepress/components/Comment.vue 생성 -->
 <template>
   <div ref="comment"></div>
 </template>
