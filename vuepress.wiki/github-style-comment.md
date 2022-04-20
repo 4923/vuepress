@@ -58,10 +58,14 @@
 ### 3. 댓글 컴포넌트 삽입
 > [주요 참고: 기억보다 기록을 blog](https://kyounghwan01.github.io/blog/Vue/vuepress/vuepress-github-comment/)
 
-그런데 2.4에서 작성된 코드를 그대로 적으면 문제가 생기는지 참고 블로그에서는 조금 다른 코드를 제시했다. vue에 대한 이해를 쌓은 후 다시 이유를 파악해보자.
+그런데 2.4에서 작성된 코드를 그대로 적으면 문제가 생기는지 참고 블로그에서는 조금 다른 코드를 제시했다. 
+
+아래 코드는 `.vuepress/theme/Comment.vue` 파일로 `global-components`라고 한다. VuePress Post에 직접적으로 `<script>` 태그를 직접적으로 추가할 수 없어 대안적으로 생성한 파일이다. 
+
+이 `global-components`는 또 `theme`의 기능이기 때문에 theme 마다 적용하는 방식이 다르다.
 
 ```vue
-<!-- vuepress/docs/.vuepress/components/Comment.vue 생성 -->
+<!-- vuepress/docs/.vuepress/theme/Comment.vue 생성 -->
 <template>
   <div ref="comment"></div>
 </template>
@@ -80,20 +84,20 @@ export default {
     utterances.setAttribute("theme", "github-light"); // theme 설정 (github-light, github-dark, preferred-color-scheme, github-dark-orange, icy-dark, dark-blue, photon-dark, boxy-light) 중 하나 선택
     utterances.setAttribute("repo", `4923/vuepress`); // 주의!! 사용할 repository
 
+    // script tag 삽입
     this.$refs.comment.appendChild(utterances);
-  },
-};
+  }
+}
 </script>
 ```
 
 위의 원본 코드와 잘 비교해보면 주요한 요소 (src, repo, issue-term, label, theme, crossorigin) 는 대부분 포함되어 있는 것을 알 수 있는데 `utterance.` 와 `utterances.setAttribute("~", "")` 로 나눈 이유를 모르겠다.
 
-우선 참고 코드에 label이 존재하지 않으므로 `issue-term` 하단에 한 줄 추가했다.
 ```js
     utterances.setAttribute("label", "Comment💬");
 ```
 
-이제 게시글을 작성하고 포스팅의 마지막에 `<Comment />` 를 추가하면 댓글이 생긴다.
+우선 Comment가 달린 issue에 붙일 Label을 설정해주고 게시글을 작성하고 포스팅의 마지막에 `<Comment />` 를 추가하면 댓글이 생긴다.
 
 ```markdown
 ## 제목은 # 두개로 작성한다고 했다.

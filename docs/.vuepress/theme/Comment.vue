@@ -2,7 +2,7 @@
 <template>
   <div ref="comment"></div>
 </template>
-<script>
+<<script>
 // https://kyounghwan01.github.io/blog/Vue/vuepress/vuepress-github-comment/#댓글-컴포넌트-추가
 export default {
   mounted() {
@@ -18,7 +18,8 @@ export default {
     utterances.setAttribute("theme", "github-light"); // theme 설정 (github-light, github-dark, preferred-color-scheme, github-dark-orange, icy-dark, dark-blue, photon-dark, boxy-light) 중 하나 선택
     utterances.setAttribute("repo", `4923/vuepress`); // 주의!! 사용할 repository
 
+    // script tag 삽입
     this.$refs.comment.appendChild(utterances);
-  },
-};
+  }
+}
 </script>
