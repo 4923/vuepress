@@ -70,16 +70,16 @@ module.exports = {
         sidebarGroupOrder: [
           'intro',
           'computer-science',
-          'html-css-js',
-          'django'
+          'web-basic',
+          'Django'
         ]
       },
       '/kr/': {
         sidebarGroupOrder: [
           'intro',
           'computer-science',
-          'html-css-js',
-          'django'
+          'web-basic',
+          'Django'
         ]
       },
     },

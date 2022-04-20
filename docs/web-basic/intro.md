@@ -1,5 +1,5 @@
 ---
-title: FE stack을 쌓읍시다
+title: Front End stack을 쌓읍시다
 ---
 ## build test
 
