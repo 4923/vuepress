@@ -39,7 +39,12 @@ module.exports = {
         src: "https://www.googletagmanager.com/gtag/js?id=G-35584GW730",
       },
     ],
-    ["script", {}, ["window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-35584GW730');"]],
+    [
+      "script",
+      {},
+      ["window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-35584GW730');"
+      ]
+    ],
   ],
 
 
@@ -49,15 +54,15 @@ module.exports = {
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
   themeConfig: {
-    repo: '',
-    editLinks: false,
-    docsDir: '',
-    editLinkText: '',
+    repo: '4923/vuepress',
+    docsDir: '4923/vuepress',
+    // editLinks: false,
+    // editLinkText: '',
     lastUpdated: false,
     nav: [
       {
-        text: 'VuePress',
-        link: 'https://v1.vuepress.vuejs.org'
+        text: 'Resume',
+        link: 'https://programmers.co.kr/pr/202003774y_5084'
       }
     ],
     sidebar: [
