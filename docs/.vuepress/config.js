@@ -65,24 +65,24 @@ module.exports = {
         link: 'https://programmers.co.kr/pr/202003774y_5084'
       }
     ],
-    sidebar: [
-      '/intro',
-      {
-        title: 'CS',
-        collapsable: true,
-        children: ['CS/intro']
+    locales: {
+      '/': {
+        sidebarGroupOrder: [
+          'intro',
+          'computer-science',
+          'html-css-js',
+          'django'
+        ]
       },
-      {
-        title: 'FE',
-        collapsable: true,
-        children: ['FE/intro']
+      '/kr/': {
+        sidebarGroupOrder: [
+          'intro',
+          'computer-science',
+          'html-css-js',
+          'django'
+        ]
       },
-      {
-        title: 'Django',
-        collapsable: true,
-        children: ['Django/intro']
-      }
-    ],
+    },
   },
 
   /**
