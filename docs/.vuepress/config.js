@@ -1,14 +1,10 @@
 const { description } = require('../../package')
 
 module.exports = {
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#title
-   */
-  title: '4923.py',
-  /**
-   * Ref：https://v1.vuepress.vuejs.org/config/#description
-   */
-  description: description,
+  title: '4923.py', // * Ref：https://v1.vuepress.vuejs.org/config/#title
+  description: '"Api friendly theme for vuepress!" they said', // * Ref：https://v1.vuepress.vuejs.org/config/#description
+  theme: 'api',  // https://github.com/sqrthree/vuepress-theme-api
+
   base: '/vuepress/',
 
   /**
@@ -52,7 +48,6 @@ module.exports = {
    *
    * ref：https://v1.vuepress.vuejs.org/theme/default-theme-config.html
    */
-  theme: 'vuepress-theme-api',  // https://github.com/sqrthree/vuepress-theme-api
   themeConfig: {
     repo: '',
     editLinks: false,
