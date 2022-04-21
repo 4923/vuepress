@@ -1,7 +1,7 @@
 ---
 home: true
 title: Hello, Strangers!
-description: Greetings! I wrote what learned as a python programmer so far however, it might be not organized or wrong. In addition, English is my second language my sentences or descriptions could be confused. When you find some, please let me know. I would be glad. Thanks!
+description: Greetings! I wrote what learned as a python programmer so far. Also as a second language English speaker, some descriptions could be confused. When you find, please let me know. I would be glad. Thanks!
 actionText: Getting Started
 actionLink: /intro
 footer: Open Source on [GitHub](https://github.com/sqrthree/vuepress-theme-api), Made by [@sqrthree](https://github.com/sqrthree), Power by [vuepress](https://github.com/vuejs/vuepress).
