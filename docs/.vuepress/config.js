@@ -16,7 +16,7 @@ module.exports = {
       lang: 'zh-hans',
       title: '4923.py',
       text: '한국어',
-      description: '"📦 🎨 RESTful API 친화적인 vuepress 테마"라고 합니다.'
+      description: '"📦 🎨 Api friendly theme for vuepress!" they said'
     },
   },
   /**
