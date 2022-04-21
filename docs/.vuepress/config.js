@@ -100,5 +100,6 @@ module.exports = {
       }
     ],
     "@vuepress/last-updated",
+    "vuepress-plugin-code-copy",
   ]
 }

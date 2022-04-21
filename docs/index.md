@@ -7,6 +7,8 @@ actionLink: /intro
 footer: Open Source on [GitHub](https://github.com/sqrthree/vuepress-theme-api), Made by [@sqrthree](https://github.com/sqrthree), Power by [vuepress](https://github.com/vuejs/vuepress).
 ---
 
+<Example>
+
 ```py
 # 4923.py
 # Do everything What makes me HAPPY
@@ -20,6 +22,10 @@ def introduce(programmer:tech_geek, researcher:cognitive, product_manager:crossr
     product_manager = 'novice'  # as a communicator
     return social_movement
 ```
+
+</Example>
+<br>
+<br>
 
 <Section>
 
