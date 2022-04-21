@@ -2,11 +2,23 @@ const { description } = require('../../package')
 
 module.exports = {
   title: '4923.py', // * Ref：https://v1.vuepress.vuejs.org/config/#title
-  description: '"Api friendly theme for vuepress!" they said', // * Ref：https://v1.vuepress.vuejs.org/config/#description
+  description: '"📦 🎨 Api friendly theme for vuepress!" they said', // * Ref：https://v1.vuepress.vuejs.org/config/#description
   theme: 'api',  // https://github.com/sqrthree/vuepress-theme-api
-
   base: '/vuepress/',
-
+  locales: {
+    '/': {
+      lang: 'en-US',
+      title: '4923.py',
+      text: 'English',
+      description: '"📦 🎨 Api friendly theme for vuepress!" they said'
+    },
+    '/kr/': {
+      lang: 'zh-hans',
+      title: '4923.py',
+      text: '한국어',
+      description: '"📦 🎨 RESTful API 친화적인 vuepress 테마"라고 합니다.'
+    },
+  },
   /**
    * Extra tags to be injected to the page HTML `<head>`
    *
@@ -47,7 +59,6 @@ module.exports = {
     ],
   ],
 
-
   /**
    * Theme configuration, here is the default theme configuration for VuePress.
    *
@@ -59,28 +70,15 @@ module.exports = {
     // editLinks: false,
     // editLinkText: '',
     lastUpdated: false,
-    nav: [
-      {
-        text: 'Resume',
-        link: 'https://programmers.co.kr/pr/202003774y_5084'
-      }
-    ],
+
     locales: {
       '/': {
-        sidebarGroupOrder: [
-          'intro',
-          'computer-science',
-          'web-basic',
-          'Django'
-        ]
+        selectText: 'Languages',
+        label: 'English',
       },
       '/kr/': {
-        sidebarGroupOrder: [
-          'intro',
-          'computer-science',
-          'web-basic',
-          'Django'
-        ]
+        selectText: '언어 선택',
+        label: '한국어',
       },
     },
   },
