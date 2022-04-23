@@ -1,5 +1,5 @@
 ---
-title: intro
+title: page template
 ---
 
 
@@ -31,7 +31,7 @@ Example Content 1
 
 </Block>
 
-<!-- Main 1 -->
+<!-- Main 2 -->
 
 <Block>
 
