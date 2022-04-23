@@ -31,7 +31,7 @@ def introduce(programmer:tech_geek, researcher:cognitive, product_manager:crossr
 
 ## Contact Me
 
-Call Me : YeEun, 4923 / She, Her  
+Call Me : YeEun, Devin, 4923 / She, Her  
 Github : [https://github.com/4923](https://github.com/4923)
 
 <br>
