@@ -76,7 +76,7 @@ module.exports = {
         selectText: 'Languages',
         label: 'English',
       },
-      '/kr/intro/': {
+      '/kr/': {
         selectText: '언어 선택',
         label: '한국어',
       },
