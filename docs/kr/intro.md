@@ -1,5 +1,5 @@
 ---
-title: intro
+title: Welcome
 ---
 
 
@@ -17,30 +17,33 @@ title: intro
 <Block>
 
 ## 한국어 문서입니다.
-테스트를 위해 작성!
 
 <Example>
 
 Example Content 1
 
 ```html
-<p>What Happened to me</p>
+<p>Hello World!</p>
 ```
 
 </Example>
 
 </Block>
 
-<!-- Main 1 -->
+<!-- Main 2 -->
 
 <Block>
 
-## Title 2
+## 형식에 구애받지 않고 편하게 작성합니다.
 Main content 2
 
 <Example>
 
 Example Content 2
+```py
+import exciting
+exciting.fit(what_makes_me_happy)
+```
 
 </Example>
 

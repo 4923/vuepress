@@ -13,7 +13,7 @@ module.exports = {
       description: '"📦 🎨 Api friendly theme for vuepress!" they said'
     },
     '/kr/': {
-      lang: 'zh-hans',
+      lang: 'kr',
       title: '4923.py',
       text: '한국어',
       description: '"📦 🎨 Api friendly theme for vuepress!" they said'
@@ -76,7 +76,7 @@ module.exports = {
         selectText: 'Languages',
         label: 'English',
       },
-      '/kr/': {
+      '/kr/intro/': {
         selectText: '언어 선택',
         label: '한국어',
       },
