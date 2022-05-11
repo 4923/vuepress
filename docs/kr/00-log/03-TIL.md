@@ -92,3 +92,40 @@ reference
 </Example>
 
 </Block>
+<Block>
+
+### Github Token, Authentication error (5/11)
+
+
+vuepress 블로그 만들 때부터 지금까지 키체인에서 없애도 없어지지 않는 좀비 토큰과 이주째 싸웠는데 어느날 갑자기 되더니... 어젯밤에 이상하게 배포가 됐는데 오늘 다시 push 하려니까 똑같은 에러가 뜨더라. 이럴리가 없는데... 하고 user/settings 갔더니 어제 멀쩡히 만들어뒀던 토큰이 흔적도 없이 사라져 있었다.
+
+우선 우측 코드 블럭과 같은 상황에서는
+
+1. personal token 생성 한다. 잃어버리지 않도록 따로 적어두어야 하며, 이후에도 regenerate만 할 수 있지 동일한 코드를 발급받을 수는 없다.
+2. `command + space` 로 spotlight 를 열어 `키체인 접근` 을 열고
+3. 검색창에 git 또는 github 을 입력해 나오는 암호에 미리 생성해둔 personal token을 입력한다.
+    - 이 때 VSC에 github을 연결해뒀다면 연필모양과 함께 잡다한 토큰들이 보일텐데 이건 git 키체인에서 받아오는 값이므로 바꾸지 않아도 된다.
+4. Github Action: 또, 내 오류가 Github Action deploy 문제이니 해당 repository의 settings에서 secret key를 관리해줘야 한다. (나의 경우 `ACCESS_TOKEN`)
+    - personal token을 재발급 받은 경우에도 이 값을 바꿔주는 것을 잊지 말자.
+
+일단 토큰 재발급해서 재배포는 했는데... 내일도 이러면 어쩔지 생각해봐야겠다. 로컬 세팅의 문제면 환경변수문제인지 확인이라도 해보겠는데 (맥에서 환경변수라니...) 아예 github 웹에서 발급받아둔 토큰이 흔적도 없이 삭제된 일이라 문제가 뭔지 짐작도 안간다. expired 되었다면 그렇다고 써있을텐데 그것도 아니고. 우선 오늘은 이쯤해서 마무리한다.
+
+<Example>
+
+> OS: Mac Monterey  
+> 2022.05 Github Token  
+> IDE: Visual Studio Code
+
+```bash
+# Github Action : 배포 실패한 커밋은 덮어버려서 로그가 남지 않았으나 하단 링크와 동일한 상황
+# https://github.com/4923/vuepress/runs/6373567306?check_suite_focus=true
+remote: Invalid username or password.
+fatal: Authentication failed for '***github.com/4923/vuepress.git/'
+```
+</Example>
+
+
+</Block>
+
+
+
