@@ -136,6 +136,8 @@ workflow가 체계적으로 설계되어 있어 이후에 좀 복잡한 프로�
 
 우선 [다른 사람](https://lucaseo.github.io/posts/2020-11-29-fastpages/)의 초기 PR 을 확인하고 repo key를 설정한 후 [fastpages/.github/workflows/](https://github.com/fastai/fastpages/tree/master/.github/workflows) 의 setup.yaml, gh-pages.yaml 을 수정해봤는데 배포가 멀쩡히 되기는 돼도 CSS가 적용되지 않는 문제가 발생했다. github personal token을 자동으로 받아와야 한다는건데 결국... 왜 안되는지 일단 모르겠다. 안 될 시 workflows/ 에 있는 모든 GITHUB_TOKEN을 repo secret으로 변경하는 방법 뿐이란 생각이다.
 
+- [동일한 issue report 발견 / Initial commit Setup #1 [The requested URL returned error: 403]](https://github.com/fastai/fastpages/issues/640)
+
 <Example>
 
 
