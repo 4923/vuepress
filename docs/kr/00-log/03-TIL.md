@@ -126,6 +126,20 @@ fatal: Authentication failed for '***github.com/4923/vuepress.git/'
 
 
 </Block>
+<Block>
+
+### Jekyll 기반 blog template, fastpages 적용기: Github Action Token으로 인한 실패 (5/12)
+
+fast.ai 에서 만든 블로그 템플릿으로 ([github repo](https://github.com/fastai/fastpages#writing-blog-posts-with-jupyter)) LaTeX, Jupyter Notebook, docx 까지 HTML로 변환해주는 깔끔한 템플릿이다. vuepress 죽어라고 만들어서 그거 쓰려고 했는데 아무래도 인공지능쪽 일을 하고, 하게 될 것이다보니 이 강점을 거부할 수 없었다. 사용방법은 해당 repo의 README에 적힌 바와 같다. `use template` 을 이용해서 fork 떠오듯 본인 깃허브에 옮기면 자동으로 github action이 initial setting을 진행한 후 PR 하나가 올라오는데 어제 토큰에 문제가 있어서 그런지 나는 그 간단한 과정에서 계속 403 에러가 뜨더라...
+
+workflow가 체계적으로 설계되어 있어 이후에 좀 복잡한 프로젝트를 진행할 때 참고해야 겠다는 생각을 했다. Github Token을 자동으로 받아오지 못하면 vuepress에서처럼 `GITUB_TOKEN` 을 전부 repository secret으로 별도 관리 하면 된다고 생각했는데 생각보다 너무 많더라...
+
+우선 [다른 사람](https://lucaseo.github.io/posts/2020-11-29-fastpages/)의 초기 PR 을 확인하고 repo key를 설정한 후 [fastpages/.github/workflows/](https://github.com/fastai/fastpages/tree/master/.github/workflows) 의 setup.yaml, gh-pages.yaml 을 수정해봤는데 배포가 멀쩡히 되기는 돼도 CSS가 적용되지 않는 문제가 발생했다. github personal token을 자동으로 받아와야 한다는건데 결국... 왜 안되는지 일단 모르겠다. 안 될 시 workflows/ 에 있는 모든 GITHUB_TOKEN을 repo secret으로 변경하는 방법 뿐이란 생각이다.
+
+<Example>
 
 
+</Example>
 
+
+</Block>
