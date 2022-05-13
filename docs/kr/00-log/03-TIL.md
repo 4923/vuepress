@@ -145,3 +145,18 @@ workflow가 체계적으로 설계되어 있어 이후에 좀 복잡한 프로�
 
 
 </Block>
+<Block>
+
+### Jekyll 기반 blog template, fastpages 적용기: Github Action 정책이슈 확인, PR 생성 (5/13)
+
+22년 1월부터 github pages resource 관리를 위해 action이 자동으로 action을 생성하고 contents를 생성하게 하지 않도록 `github-action[bot]`이 제한했다고 했는데 이 때문에 현재 fastpages의 강점인 initial set이 불가능해졌다.   
+이를 해결하기 위해선 PAT (Personal Access Token)을 사용하거나 repo settings/Actiona/general 에서 workflows permisssion을 수동으로 허가해줘야 하는데 이는 fastpages의 강점을 살리지 못하는 방법 같아 contents 추가는 `setup.yaml` 에서 permissions 를 추가했고, Action이 PR을 생성하게 하는 권한을 yaml으로 주고 싶었는데 도저히 거기까진 해결이 안됐다. 우선 구글링 한 결과 여기까지가 한계고, 배경지식이 좀 부족한 것 같아 개선안만 PR에 작성해 올렸다.
+
+
+<Example>
+
+작성한 PR
+
+- [fastpages/Suggest setup instruction by changed Github Action Policy](https://github.com/fastai/fastpages/pull/642)
+
+</Example>
