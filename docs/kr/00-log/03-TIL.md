@@ -178,6 +178,37 @@ workflow가 체계적으로 설계되어 있어 이후에 좀 복잡한 프로�
 <Example>
 
 
+![wikipedia, Micatlan PPG](https://news.samsungdisplay.com/wp-content/uploads/2021/12/1221_4.gif)
+
+</Example>
+
+
+</Block>
+<Block>
+
+### HRV를 이용한 교감신경 활성 지표: ECG, PPG (5/16)
+
+스트레스는 자율신경계의 변화를 야기하는데 HRV (Heart Rate Variability, 심박변이율) 는 이를 파악하는 좋은 생체징후 지표가 된다. 이를 파악하는 지표는 심장의 전기 활동을 측정하는 ECG (Electrocardiogram) 와 광혈류측정방식인 PPG (Photoplethysmography) 가 있다. ECG는 가슴에 센서 등을 부착하여 측정하는 반면 PPG는 손가락에 집게 형태의 센서를 끼워 측정했다.
+
+> 광학적 혈량 변화 검출방식은 광 원 나온 빛이 손가락을 조사하면, 일부 광은 신체조직, 즉 혈액, 뼈, 피부조직에서 흡수가 되고, 일부 광은 투과되거나 반사가 된 다. 이러한 일부 광들이 광수신기도 도달하면, 변동되지 않는 조 직, 피부, 뼈 이외에 변동이 되는 혈액에 의해 광량이 달라진다. 이러한 광량을 측정하여 심장박동과 동기화된 혈당변화와 파형을 알 수 있게 되며, 이것을 광전용적맥파, 즉 PPG(Photoplethysmo Graph)라고 한다.
+
+건강한 사람의 HRV 변동성은 크고 복잡하지만 질병상태, 또는 스트레스 상황에서는 복잡도가 감소한다. HRV는 심장박동수를 시계열로 분석하여 유추하며 심전도에서 얻어지는 `RR(R-R Interval) 간격` 또는 `NN(N-N Interval) 간격` 분석이 가능하다. 가장 유용하다고 평가받고 있는 변이도 측정 지표는 `SDNN`으로, 측정된 전체 NN간격의 표준편차를 구하는 방식이다. 이를 통해 심장 박동의 변화 수준을 가늠할 수 있다. (그림6 참고)
+
+
+- 참고 1 [정원식. "스마트폰에서 PPG를 이용한 스트레스 분석 시스템 개발." 국내석사학위논문 高麗大學校 醫用科學大學院, 2014. 서울](http://www.riss.kr/search/detail/DetailView.do?p_mat_type=be54d9b8bc7cdb09&control_no=7f4e87849831fc4effe0bdc3ef48d419&outLink=K)
+- 참고 2 [김대열, 김진수 and 이광기. (2021). 안면 이미지 데이터를 이용한 실시간 생체징후 측정시스템. 방송공학회 논문지, 26(2), 132-142.](https://www.kci.go.kr/kciportal/ci/sereArticleSearch/ciSereArtiView.kci?sereArticleSearchBean.artiId=ART002699582)
+
+
+<Example>
+
+<img width="500" alt="피부의 빛 반사 모델" src="https://user-images.githubusercontent.com/60145951/168598223-6d723ca3-f6bc-4d10-9284-13c8b333ead8.png">
+
+참고 2, 피부의 빛 반사 모델
+
+<img width="500" alt="image" src="https://user-images.githubusercontent.com/60145951/168598459-fadb5013-5aeb-4142-87d2-57fe6f3e21f9.png">
+
+참고 2, 심박변이도 시간영역 분석 지표
+
 </Example>
 
 
