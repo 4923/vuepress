@@ -240,3 +240,21 @@ TFLite는 Android 및 iOS, Linux와 마이크로 컨트롤러를 포함한 다�
 
 
 </Block>
+<Block>
+
+### WSGI, 위스키란? (5/18)
+
+- Web Server : 웹 서버는 정적이다. 클라이언트의 요청에 따라 리소스를 *그대로* 전달하는 역할을 하며, NGNIX와 Apatch 가 속한다. 
+- CGI (Common Gateway Interface) : 정적인 웹서버를 동적으로 동작하게 하기 위한 규칙/인터페이스다. 
+
+WSGI도 CGI와 비슷하다. WSGI Server에서 Python Web Framework를 중개하며 CGI의 디자인 패턴을 업그레이드 한 프로토콜/인터페이스다.
+- WSGI Server : middleware라고 부르며 gunicorn 등이 포함됨
+- Python Web Framework: Django, flask 등 WSGI를 지원하는 Web Application
+
+<Example>
+
+- [https://brownbears.tistory.com/350](https://brownbears.tistory.com/350)
+
+
+</Example>
+</Block>
