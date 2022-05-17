@@ -213,3 +213,30 @@ workflow가 체계적으로 설계되어 있어 이후에 좀 복잡한 프로�
 
 
 </Block>
+<Block>
+
+### tensorflow에서의 경량화: TFLite (5/17)
+
+tensorflow lite 는 모바일 디바이스 기기를 위한 ML Tool이다. 기기 내에서 머신러닝을 돌리기 위해서는 아래 다섯가지 핵심사항을 만족시켜야한다.
+
+하나, 서버까지의 왕복시간을 필요로 하지 않는 `지연시간 0`
+
+둘, 기기에 개인정보를 남기지 않는 `개인정보 보호`
+
+셋, 인터넷 연결이 필요하지 않은 `연결성`
+
+넷, 모델 및 바이너리 크기가 작은 `휴대성`
+
+다섯, 네트워크 연결이 불필요하고 효율적으로 추론하여 `전력소비`를 최소화
+
+TFLite는 Android 및 iOS, Linux와 마이크로 컨트롤러를 포함한 다양한 플랫폼을 지원하며 Java, Swift, Objective-C, CPP, Python 등 다양한 언어를 지원한다. 
+
+대부분 Tensorflow 모델을 만든 후 이를 Tensorflow Lite모델로 변환하는 과정을 거친다. 변환 중에 양자화를 포함한 최적화를 적용하여 정확성을 유지하고 모델 크기와 지연시간을 줄이는 방식을 취한다. 서버를 필요로 하지 않으므로 일반적으로 ML용 서버를 두는 것과 다르게 TFLite는 서버를 구축하지 않은 상태로 개발에 착수한다.
+<Example>
+
+- [TFLite](https://www.tensorflow.org/lite/guide?hl=ko)
+
+</Example>
+
+
+</Block>
