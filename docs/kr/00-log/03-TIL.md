@@ -335,7 +335,65 @@ Notion의 코드블럭에서도 볼수 있는 `Wrapping Cell` 기능은 코드�
 }
 ```
 
+</Example>
+</Block>
 
+<Block>
+
+### SSRI와 biomarker에 대한 자잘한 지대넓얕 (5/21)
+
+<Example>
+
+</Example>
+</Block>
+
+<Block>
+
+#### metabolism과 항우울제, 정밀의료의 가능성
+SSRI뿐 아니라 모든 약은, 약을 복용하는 사람의 대사량에 따라 효과가 다르게 나타나는데 대사량은 혈액검사 등으로 알 수 있다.
+
+<Example>
+
+</Example>
+</Block>
+
+<Block>
+
+#### SSRI 작용에 영향을 미치는 biomarker가 있다?
+
+CYP2C19 와 CYP450; (polymorphisms of CYP2D6, 2C19, 2C8, 2C9, and 1A1.)
+- CYP2C19: cytochrome P450, family 2
+- polymorphism: 다형
+
+
+> The CYP2C19 gene is a member of the cytochrome P450 gene family. Enzymes produced from cytochrome P450 genes are involved in the formation and breakdown (metabolism) of various molecules and chemicals within cells. The CYP2C19 gene provides instructions for making an enzyme that is found primarily in liver cells in a cell structure called the endoplasmic reticulum, which is involved in protein processing and transport.
+https://medlineplus.gov/genetics/gene/cyp2c19/
+
+- [Impact of CYP2C19 metaboliser status on SSRI response: a retrospective study of 9500 participants of the Australian Genetics of Depression Study](https://www.nature.com/articles/s41397-022-00267-7)
+- [Review of evidence for genetic testing for CYP450 polymorphisms in management of patients with nonpsychotic depression with selective serotonin reuptake inhibitors](https://www.nature.com/articles/gim2007123)
+
+논문을 전부 읽어 볼 수는 없었지만, CYP2C19가 SSRI의 대사과정에 영향을 미치는 표지자이며 CYP450와 SSRI의 연관성은 검토된 바 있으나 증거로 채택되기엔 부족한 수준인 것으로 보인다. 결론적으로, SSRI 작용에 영향을 미치는 biomarker를 의학계에서 찾아내는 중이며 이를 활용할 때 지금까지 의사의 경험에 의존했던 항우울제 선택에 도움이 될 가능성이 있다.
+
+- [GENOME-BASED THERAPEUTIC DRUGS FOR DEPRESSION (GENDEP): 적합한 항우울제 선택의 중요성, 2008.01](https://cordis.europa.eu/project/id/503428/reporting)
+
+<Example>
+
+<img alt="metabolism and treatment reponse inferred by genetics" src=https://user-images.githubusercontent.com/60145951/169667161-3d35c76d-056f-4648-b59f-687242a02531.png width = 800>
+
+metabolism and treatment reponse inferred by genetics
+
+</Example>
+</Block>
+
+<Block>
+
+#### SSRI 부작용 건수가 가장 많은 질환군 (issue of efficacy vs adverse side effects)
+
+- Major depression disorder
+- OCD
+- Panic disorder
+
+<Example>
 
 </Example>
 </Block>
