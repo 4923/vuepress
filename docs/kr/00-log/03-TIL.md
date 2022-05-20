@@ -306,3 +306,36 @@ TEU MED OT 에서도 말씀하셨지만, 문제는 크기가 작을수록 부정
 
 </Example>
 </Block>
+
+<Block>
+
+### 주피터노트북의 자동 줄 바꿈 설정(5/20)
+
+Notion의 코드블럭에서도 볼수 있는 `Wrapping Cell` 기능은 코드블럭 안의 내용이 화면의 Width를 넘을 경우 자동으로 줄바꿈하는 기능이다.  Notion은 버튼 하나로 설정과 해제가 가능하지만 주피터 노트북에서는 `json`파일을 수정해줘야 한다. 늘 그렇듯이 말이다.
+
+이전에 주피터 설정을 커스텀 한 적 없다면 `touch nbconfig/notebook.json` 명령어를 통해 notebook.json을 생성한다.
+
+그리고 생성된 notebook.json에서 우측 예제코드처럼 `"lineWrapping": true`가 포함된 코드를 입력한 후 주피터 커널을 재시작하면 마크다운 및 코드에서 자동으로 줄바꿈 기능이 적용될 것이다.
+
+
+<Example>
+
+```json
+{
+     "MarkdownCell": {
+       "cm_config": {
+         "lineWrapping": true
+       }
+     },
+     "CodeCell": {
+       "cm_config": {
+         "lineWrapping": true
+       }
+     }
+}
+```
+
+
+
+</Example>
+</Block>
