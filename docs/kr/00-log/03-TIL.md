@@ -397,3 +397,26 @@ metabolism and treatment reponse inferred by genetics
 
 </Example>
 </Block>
+
+<Block>
+
+#### Python Web Framework: django, flask, fastapi, sanic (5/22)
+
+||django|flask|Fastapi|
+|:-|:-|:-|:-|
+|종류|Full Stack|Micro Framework (WSGI)|Micro Framework (ASGI)|
+|장점|high-level, 무조건 쉽고 편하게| 가볍다, 개발속도가 빠르다. | '지각변동을 일으킬 수 있는' framework: vs Node.js |
+||모든 기본기능이 준비되어있고, 공식문서가 자세하다| |빠르고, 개발하고 배우기 쉽고, 적용이 쉽게|
+||DB에 CRUD를 적용할 수 있는 기본 `admin panel`| | ASGI, FastAPI 안에서의 비동기 처리 가능|
+|| | | 뛰어난 문서로 커버 가능한 생태계 |
+|단점|속도와 볼륨 (Pyramid가 대안이 될 수 있음)| 구조적으로 한번에 많은 트래픽 처리 불가, Gunicorn이 대안이었으나 한계가 있음.| 2020년 전후, 신생 framework, 얕은 생태계|
+| | | 가파른 러닝커브, 하나부터 열까지 만들어야한다.|
+
+- [ref: python 웹프레임워크 끝판왕 가리기 django flask fastapi sanic](https://dingrr.com/blog/post/python-웹프레임워크-끝판왕-가리기-django-flask-fastapi-sanic)
+
+<Example>
+
+<img src="https://user-images.githubusercontent.com/60145951/169692944-35d7d55f-d0fd-48ef-a55c-574db85b8ead.png" width=600>
+
+</Example>
+</Block>
