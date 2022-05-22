@@ -426,6 +426,17 @@ metabolism and treatment reponse inferred by genetics
 
 #### ASGI와 WSGI의 차이점과 특징 (5/23)
 
+CGI는 정적인 웹서버와 외부 프로그램을 연결하는 표준 프로토콜이었다. 웹서버는 정적 파일을 사용자에게 다운로드 방식으로 제공했지만, 웹 서비스의 발전에 따라 클라이언트의 요청을 웹서버가 처리할 수 없는 때가 발생하기 때문이다. 현대의 웹 서비스는 REST API가 수시로 호출되고 요청과 응답이 반복되므로 더더욱 CGI로 감당하기는 어려워졌다. 이에 FastCGI가 개발된다.
+
+하지만 Python 에는 WAS가 없는데, 이를 대체하기 위해 WSGI가 개발되었다. Python App이 웹서버와 통신할 때 사용되며 CGI는 매 요청마다 프로세스를 생성한다면 WSGI는 프로세스에서 모든 요청을 받는다는 점이 다르다.
+
+하지만 WSGI는 동기 함수 처리만 지원한다는 한계가 있는데, Python에서 asyncio, coroutine 등의 비동기 처리를 지원하기 때문에 비동기 처리에 대한 요구가 커졌다. 이에 ASGI 인터페이스가 Django 3.0 및 FastAPI에서 적용되기 시작했다.
+
+ASGI는 WSGI와 운영 아키텍처는 크게 다르지 않지만, 요청이 기본적으로 비동기로 처리된다는 점이 가장 큰 차이이자 특징이라고 할 수 있겠다.
+
+- [ref:REST API 개발로 알아보는 WSGI, ASGI](https://blog.neonkid.xyz/249)
+- django projcet를 생성하면 실제로 `wsgi.py` `asgi.py`가 생성된다.
+
 <Example>
 
 
