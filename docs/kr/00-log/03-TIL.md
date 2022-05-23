@@ -444,10 +444,28 @@ ASGI는 WSGI와 운영 아키텍처는 크게 다르지 않지만, 요청이 기
 </Block>
 <Block>
 
-#### FastAPI 찍어먹기 (5/24)
+#### PR을 local에서 돌려보기 (5/24)
+
+```bash
+git fetch upstream pull/ID/head:BRANCHNAME
+git checkout BRANCHNAME
+# 이후 작업
+```
+
+- fetch: 가져오다
+- upstream: 원본 repo, 등록되어있어야 한다.
+    - git add upstream {URL}
+- pull: fetch + merge
+- ID: issue 및 PR을 생성할 때 생기는 고유 ID (#)
+- head: 향하다
+- BRANCHNAME: 새로운 분기점, branch 생성
+
+> PR 생성시 github는 PR내용을 원격으로 저장하기 때문에 (issue에 임시로 이미지 올리고, 링크 따오는것과 유사) PR merge가 되지 않아도 불러올 수 있다.
+
+- [ref: GITHUB DOCS](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/reviewing-changes-in-pull-requests/checking-out-pull-requests-locally)
+
 
 <Example>
-
 
 </Example>
 </Block>
