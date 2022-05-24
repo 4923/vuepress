@@ -469,3 +469,23 @@ git checkout BRANCHNAME
 
 </Example>
 </Block>
+
+<Block>
+
+#### 조현병과 반복염기다형성 Copy Number Varient (5/25)
+
+> >분자유전학연구의 방법론은 기본적으로 1) 유전형 genotyping, 2) 표현형 phenotyping, 통계학 statics의 세가지 기본 골격을 틀로 한다. 유전형의 대상에는 단일염기다형성 Single Nucleotide Polymorphism: SNP 이나 반복염기다형성 Copy number Variant: CNV를 포함하는 표시자, 염기서열규명 등이 있다.
+
+정신과 진단이 현상학적인 이유 중  하나는 질병과 원인이 1:1 관계가 아닌 1:N 관계에 있기 때문이다. biomarker 또는 유전체를 기반으로 진단 혹은 예측하는 방법이 시도되었지만 유전체는 정신과 임상에서 거의 사용할 수 없다. 대상군을 현상학적으로 모으는 과정에서 발생한 다양성을 모두 고려할 수 없기 때문이다.
+
+조현병의 경우, 특정 유전자가 유전자 복제수 변이 CNV 를 일으키는 경우 발생할 가능성이 높아지는데 이마저도 전체 조현병의 0.n%에 불과하다. 다시 말해, 조현병의 CNV는 유전자가 major하게 영향을 미치는 경우라고 할 수 있고 나머지는 minor라고 할 수 있다.
+
+- GWAS (Genome Wide Assosiation study): 한동안 학계에 반향을 불러일으켰지만 여파는 미미한 이론.
+    >  이 초기적 시도에서도 뚜렷한 후보유전자(p<5× 10-8)를 제시하는데는 미흡한 결과가 도출되었다.2 
+
+- [ref: 조현병에 대한 유전학연구의 최신현황, 2013](https://synapse.koreamed.org/upload/synapsedata/pdfdata/0198kjsr/kjsr-16-5.pdf)
+
+<Example>
+
+</Example>
+</Block>
