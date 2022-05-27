@@ -512,3 +512,24 @@ vuepress에서 PWA 플러그인을 설치할 때 PWA에는 Service Worker가 있
 
 </Example>
 </Block>
+
+<Block>
+
+#### 안드로이드 수명주기 (5/26)
+
+앱개발 기획서를 작성하면서 생명주기가 중요하다는 말을 들었다. SDLC, 소프트웨어 생명주기는 기획부터 개발, 사용까지 드는 시간과 경과를 말하는데 이 외에도 생명주기, 수명주기라는 용어는 다양한 분야에서 사용되고 있는 것 같았다. 
+
+안드로이드에서 활동 수명주기를 이해하기 위해서는 활동 (`Activity` 인스턴스) 개념을 알아야한다. Activity 인스턴스는 사용자가 앱을 사용하고 나가고, 다시 돌아오는 동안 변화한다. (활동 생성, 중단, 재시작 등) 따라서 Activity 클래스는 상태를 파악할 수 있는 여러 콜백을 제공한다.
+
+수명주기는 단계간 전환을 위해 6가지 콜백을 제공한다. 사용자가 활동을 벗어날 때 (아마도 리소스를 절약하기 위해) 활동을 해체하는 메서드를 호출하는데, 활동 내역은 메모리 안에 남아있고 (백그라운드에서 돌아가는 앱처럼) 상태만 변경된다. 시스템은 그 활동상태에 따라 활동을 종료할지 말지 결정하며 이것을 활동 복잡도에 따라 설계하는 것이 수명주기 메서드 구현이다. 
+- onCreate(), onStart(), onResume(), onPause(), onStop(), onDestroy()
+
+
+- [ref: 안드로이드 개발자 문서 / 활동 수명 주기에 관한 이해](https://developer.android.com/guide/components/activities/activity-lifecycle?hl=ko)
+
+<Example>
+
+![image](https://developer.android.com/guide/components/images/activity_lifecycle.png?hl=ko)
+
+</Example>
+</Block>
