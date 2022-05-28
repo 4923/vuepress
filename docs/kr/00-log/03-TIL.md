@@ -515,7 +515,7 @@ vuepress에서 PWA 플러그인을 설치할 때 PWA에는 Service Worker가 있
 
 <Block>
 
-#### 안드로이드 수명주기 (5/26)
+#### 안드로이드 수명주기 (5/28)
 
 앱개발 기획서를 작성하면서 생명주기가 중요하다는 말을 들었다. SDLC, 소프트웨어 생명주기는 기획부터 개발, 사용까지 드는 시간과 경과를 말하는데 이 외에도 생명주기, 수명주기라는 용어는 다양한 분야에서 사용되고 있는 것 같았다. 
 
@@ -530,6 +530,40 @@ vuepress에서 PWA 플러그인을 설치할 때 PWA에는 Service Worker가 있
 <Example>
 
 ![image](https://developer.android.com/guide/components/images/activity_lifecycle.png?hl=ko)
+
+</Example>
+</Block>
+
+<Block>
+
+#### DB Schema  (5/29)
+
+스키마란?
+- 데이터베이스의 구조 및  제약조건을 전반적으로 기록한 명세서; 메타데이터의 집ㅏ
+- 데이터 개체: Entity, 속성 Attribute, 관계 Relationship 로 구성된다.
+- 사용자 관점에 따라 외부스키마, 개념스키마, 내부스키마로 나뉜다.
+
+스키마의 3계층
+> 외부 스키마에 명시된 `사용자의 요구`를 개념 스키마에 적합하게 변경하고 이를 내부스키마로 옮긴다.
+- 외부스키마 : External Schema == 사용자 View
+    - 한 데이터베이스 시스템에는 여러 외부 스키마가 존재할 수 있다.
+    - 일반 사용자는 SQL를 이용해 DB를 사용한다.
+- 개념 스키마 Conceptual Schema == 전체적인 View
+    - 기관이나 조직체 관점에서의 데이터베이스다.
+    - 논리적인 구조로, 데이터베이스 당 하나만 존재한다.
+    - 개체간 관계 및 제약조건을 나타내며 권한, 보안, 규칙에 대한 명세를 정의한다.
+    - 일반적으로 `스키마`라고 하면 개념 스키마를 나타낸다.
+    - DBA (데이터베이스 관리자) 에 의해 구성된다.
+- 내부스키마 Internal Schema == 저장스키마 Storage Schema
+    - 물리 저장장치 입장에서의 데이터베이스 구조다.
+    - 저장 데이터 항목의 표현방법, 내부 레코드의 물리적 순서를 나타낸다.
+    - *시스템 프로그래머* 관점에서의 스키마다.
+
+- [ref: DB기초, 스키마란 무엇인가?](https://coding-factory.tistory.com/216)
+
+<Example>
+
+
 
 </Example>
 </Block>
