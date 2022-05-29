@@ -567,3 +567,67 @@ vuepress에서 PWA 플러그인을 설치할 때 PWA에는 Service Worker가 있
 
 </Example>
 </Block>
+
+<Block>
+
+####  BeReal : 진정성, 즉흥성을 중심으로 한 새로운 SNS (5/30)
+
+기존 소셜미디어 규칙을 따르지 않는 SNS, 진정성과 즉흥성에 집중한 BeReal이 화제다. 2021년 6월 실리콘밸리 유명 VC 에서 3000만달러 (약 374억원) 를 투자받았다. 사용 방식은 다음과 같다.
+
+- 1 매일 하나의 알림이 모든 사용자에게 발송된다
+- 2 2분 내로 현재 상황을 촬영하여 공유한다.
+    - `셀카와 정면사진을 동시에` 찍게 된다.
+    - 인스타와 달리 편집 및 필터 기능이 없다.
+    - 본인 사진을 올린 후에야 다른 사람의 사진을 볼 수 있다.
+- 3 친구들이 동시에 글을 올리게 되고 댓글을 달며 반응할 수 있다.
+    - 홈화면에서 친구들의 이모지와 댓글을 확인할 수 있다.
+    - 독특한 챌린지들이 있으며 위젯으로 BeReal에 반응할 때 친구가 이미지로 떠오른다.
+    - 나만의 이모티콘 RealMoji를 제공한다.
+
+현재 한국 vudwja 4.7을 유지하고 있으며 소셜 네트워킹 차트 53위다. 미국 및 영국, 프랑스에서는 인스타그램, 스냅챗, 핀터레스트에 이어 가장 많이 다운로드 된 앱 4위에 올랐다.
+
+가입 절차 UI가 깔끔하고 한번에 하나씩 입력할 수 있게, 큰 글씨를 활용하여 직관적으로 이해할 수 있다. 가입 절차는 다음과 같다: 풀네임 입력, 생년월일, 휴대폰인증, 유저네임 생성, 사용자 연락처 연동을 통한 친구찾기, 튜토리얼 (포스트 게시하기)
+- 유저네임 생성 단계에서 한글은 입력되지 않는데 일시적 오류인지 방침인지 모르겠다.
+
+UX가 전반적으로 직관적이고 편리하다.
+<detail>
+<summary>알림 허용 방법도 화면을 터치하면 팝업이 뜨도록 설정해뒀다.</summary>
+
+![image](https://user-images.githubusercontent.com/60145951/171030827-ca6eeabd-4ac6-458c-bc4c-f3ca2a5ac63b.png)
+
+</detail>
+
+<detail>
+<summary> 팝업 안내도 화살표와 큰 글씨를 이용해서 한눈에 들어온다. </summary>
+
+![image](https://user-images.githubusercontent.com/60145951/171031370-1f81ec73-a579-4334-a922-2fd652a35e95.png)
+
+</detail>
+<detail>
+<summary>카메라 앱을 켜는게 아니라 앱 안에서 사진을 찍는데 셀카모드를 찍는동안 확인할 수 없다. 시간차가 있는 것으로 보아 전후면 각각 한장씩 총 두장의 사진을 연속으로 찍어 합성하는 모양이다. 그리고 찍을때마다 문구가 다르게 출력되는데 (좋은 하루 되세요 등) 얼굴이 인식되지 않으면 '친구들은 당신의 얼굴을 보는 것을 좋아할거예요' 문구를 출력하는 것 같다. </summary>
+
+![image](https://user-images.githubusercontent.com/60145951/171031505-0466417f-ebdf-4999-9141-cce3a30642fb.png)
+
+</detail>
+<detail>
+<summary> 애석하게도 연락처에서 비리얼 유저를 찾지 못했는데, `발견`탭을 제공한다. </summary>
+
+![image](https://user-images.githubusercontent.com/60145951/171031797-a991ad81-e5f4-4d5f-bef3-88f2a3d8a1b2.png)
+
+</detail>
+
+잘 만든 앱이지만 유명인들 중심으로 운영되는 인스타그램에 비해 내 주변사람만 볼 수 있다는 점에서 유저층이 확실히 갈릴 것 같다. 앞으로의 운영 방향을 주시하자.
+
+
+- [ref: 스여일삶 인스타그램](https://www.instagram.com/p/CeLfxqCjxyW/?igshid=YmMyMTA2M2Y=)
+- [ref: 중앙일보](https://www.joongang.co.kr/article/25066295#home)
+
+<Example>
+|앱스토어 리뷰|앱 설명|
+|:-:|:-:|
+|![image](https://user-images.githubusercontent.com/60145951/171029687-cf040e92-a4c2-42e6-9275-4325ebb491e1.png)||![image](https://user-images.githubusercontent.com/60145951/171029860-f3796ea5-42f7-4610-9432-19815400dc2e.png)|
+
+
+
+</Example>
+</Block>
