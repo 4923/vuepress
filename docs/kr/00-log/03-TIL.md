@@ -340,26 +340,7 @@ Notion의 코드블럭에서도 볼수 있는 `Wrapping Cell` 기능은 코드�
 
 <Block>
 
-### SSRI와 biomarker에 대한 자잘한 지대넓얕 (5/21)
-
-<Example>
-
-</Example>
-</Block>
-
-<Block>
-
-#### metabolism과 항우울제, 정밀의료의 가능성
-SSRI뿐 아니라 모든 약은, 약을 복용하는 사람의 대사량에 따라 효과가 다르게 나타나는데 대사량은 혈액검사 등으로 알 수 있다.
-
-<Example>
-
-</Example>
-</Block>
-
-<Block>
-
-#### SSRI 작용에 영향을 미치는 biomarker가 있다?
+### SSRI 작용에 영향을 미치는 biomarker가 있다?
 
 CYP2C19 와 CYP450; (polymorphisms of CYP2D6, 2C19, 2C8, 2C9, and 1A1.)
 - CYP2C19: cytochrome P450, family 2
@@ -387,7 +368,7 @@ metabolism and treatment reponse inferred by genetics
 
 <Block>
 
-#### SSRI 부작용 건수가 가장 많은 질환군 (issue of efficacy vs adverse side effects)
+### SSRI 부작용 건수가 가장 많은 질환군 (issue of efficacy vs adverse side effects)
 
 - Major depression disorder
 - OCD
@@ -400,7 +381,7 @@ metabolism and treatment reponse inferred by genetics
 
 <Block>
 
-#### Python Web Framework: django, flask, fastapi, sanic (5/22)
+### Python Web Framework: django, flask, fastapi, sanic (5/22)
 
 ||django|flask|Fastapi|
 |:-|:-|:-|:-|
@@ -424,7 +405,7 @@ metabolism and treatment reponse inferred by genetics
 
 <Block>
 
-#### ASGI와 WSGI의 차이점과 특징 (5/23)
+### ASGI와 WSGI의 차이점과 특징 (5/23)
 
 CGI는 정적인 웹서버와 외부 프로그램을 연결하는 표준 프로토콜이었다. 웹서버는 정적 파일을 사용자에게 다운로드 방식으로 제공했지만, 웹 서비스의 발전에 따라 클라이언트의 요청을 웹서버가 처리할 수 없는 때가 발생하기 때문이다. 현대의 웹 서비스는 REST API가 수시로 호출되고 요청과 응답이 반복되므로 더더욱 CGI로 감당하기는 어려워졌다. 이에 FastCGI가 개발된다.
 
@@ -444,7 +425,7 @@ ASGI는 WSGI와 운영 아키텍처는 크게 다르지 않지만, 요청이 기
 </Block>
 <Block>
 
-#### PR을 local에서 돌려보기 (5/24)
+### PR을 local에서 돌려보기 (5/24)
 
 ```bash
 git fetch upstream pull/ID/head:BRANCHNAME
@@ -472,7 +453,7 @@ git checkout BRANCHNAME
 
 <Block>
 
-#### 조현병과 반복염기다형성 Copy Number Varient (5/25)
+### 조현병과 반복염기다형성 Copy Number Varient (5/25)
 
 > >분자유전학연구의 방법론은 기본적으로 1) 유전형 genotyping, 2) 표현형 phenotyping, 통계학 statics의 세가지 기본 골격을 틀로 한다. 유전형의 대상에는 단일염기다형성 Single Nucleotide Polymorphism: SNP 이나 반복염기다형성 Copy number Variant: CNV를 포함하는 표시자, 염기서열규명 등이 있다.
 
@@ -492,7 +473,7 @@ git checkout BRANCHNAME
 
 <Block>
 
-#### PWA/Service Worker (5/26)
+### PWA/Service Worker (5/26)
 
 vuepress에서 PWA 플러그인을 설치할 때 PWA에는 Service Worker가 있어 오프라인에서도 사용할 수 있다는 설명을 들었다. 
 
@@ -515,7 +496,7 @@ vuepress에서 PWA 플러그인을 설치할 때 PWA에는 Service Worker가 있
 
 <Block>
 
-#### 안드로이드 수명주기 (5/28)
+### 안드로이드 수명주기 (5/28)
 
 앱개발 기획서를 작성하면서 생명주기가 중요하다는 말을 들었다. SDLC, 소프트웨어 생명주기는 기획부터 개발, 사용까지 드는 시간과 경과를 말하는데 이 외에도 생명주기, 수명주기라는 용어는 다양한 분야에서 사용되고 있는 것 같았다. 
 
@@ -536,7 +517,7 @@ vuepress에서 PWA 플러그인을 설치할 때 PWA에는 Service Worker가 있
 
 <Block>
 
-#### DB Schema  (5/29)
+### DB Schema  (5/29)
 
 스키마란?
 - 데이터베이스의 구조 및  제약조건을 전반적으로 기록한 명세서; 메타데이터의 집ㅏ
@@ -570,7 +551,7 @@ vuepress에서 PWA 플러그인을 설치할 때 PWA에는 Service Worker가 있
 
 <Block>
 
-####  BeReal : 진정성, 즉흥성을 중심으로 한 새로운 SNS (5/30)
+###  BeReal : 진정성, 즉흥성을 중심으로 한 새로운 SNS (5/30)
 
 기존 소셜미디어 규칙을 따르지 않는 SNS, 진정성과 즉흥성에 집중한 BeReal이 화제다. 2021년 6월 실리콘밸리 유명 VC 에서 3000만달러 (약 374억원) 를 투자받았다. 사용 방식은 다음과 같다.
 
@@ -589,45 +570,79 @@ vuepress에서 PWA 플러그인을 설치할 때 PWA에는 Service Worker가 있
 가입 절차 UI가 깔끔하고 한번에 하나씩 입력할 수 있게, 큰 글씨를 활용하여 직관적으로 이해할 수 있다. 가입 절차는 다음과 같다: 풀네임 입력, 생년월일, 휴대폰인증, 유저네임 생성, 사용자 연락처 연동을 통한 친구찾기, 튜토리얼 (포스트 게시하기)
 - 유저네임 생성 단계에서 한글은 입력되지 않는데 일시적 오류인지 방침인지 모르겠다.
 
-UX가 전반적으로 직관적이고 편리하다.
-<detail>
-<summary>알림 허용 방법도 화면을 터치하면 팝업이 뜨도록 설정해뒀다.</summary>
 
-![image](https://user-images.githubusercontent.com/60145951/171030827-ca6eeabd-4ac6-458c-bc4c-f3ca2a5ac63b.png)
 
-</detail>
+<Example>
+앱 설명
 
-<detail>
-<summary> 팝업 안내도 화살표와 큰 글씨를 이용해서 한눈에 들어온다. </summary>
+<img alt="example screenshot" src="https://user-images.githubusercontent.com/60145951/171029860-f3796ea5-42f7-4610-9432-19815400dc2e.png" width=400>
 
-![image](https://user-images.githubusercontent.com/60145951/171031370-1f81ec73-a579-4334-a922-2fd652a35e95.png)
 
-</detail>
-<detail>
-<summary>카메라 앱을 켜는게 아니라 앱 안에서 사진을 찍는데 셀카모드를 찍는동안 확인할 수 없다. 시간차가 있는 것으로 보아 전후면 각각 한장씩 총 두장의 사진을 연속으로 찍어 합성하는 모양이다. 그리고 찍을때마다 문구가 다르게 출력되는데 (좋은 하루 되세요 등) 얼굴이 인식되지 않으면 '친구들은 당신의 얼굴을 보는 것을 좋아할거예요' 문구를 출력하는 것 같다. </summary>
+</Example>
+</Block>
 
-![image](https://user-images.githubusercontent.com/60145951/171031505-0466417f-ebdf-4999-9141-cce3a30642fb.png)
+<Block>
 
-</detail>
-<detail>
-<summary> 애석하게도 연락처에서 비리얼 유저를 찾지 못했는데, `발견`탭을 제공한다. </summary>
+#### BeReal 간단 사용기
 
-![image](https://user-images.githubusercontent.com/60145951/171031797-a991ad81-e5f4-4d5f-bef3-88f2a3d8a1b2.png)
+> UX가 전반적으로 직관적이고 편리하다.
 
-</detail>
+알림 허용 방법도 화면을 터치하면 팝업이 뜨도록 설정해뒀다.
 
-잘 만든 앱이지만 유명인들 중심으로 운영되는 인스타그램에 비해 내 주변사람만 볼 수 있다는 점에서 유저층이 확실히 갈릴 것 같다. 앞으로의 운영 방향을 주시하자.
+<Example>
+
+<img alt="example screenshot" src="https://user-images.githubusercontent.com/60145951/171030827-ca6eeabd-4ac6-458c-bc4c-f3ca2a5ac63b.png" width=400>
+
+</Example>
+</Block>
+
+<Block>
+
+#### 팝업 가이드
+
+팝업 안내도 화살표와 큰 글씨를 이용해서 한눈에 들어온다. 
+
+<Example>
+
+<img alt="example screenshot" src="https://user-images.githubusercontent.com/60145951/171031370-1f81ec73-a579-4334-a922-2fd652a35e95.png" width=400>
+
+
+</Example>
+</Block>
+
+<Block>
+
+#### Time to BeReal
+
+카메라 앱을 켜는게 아니라 앱 안에서 사진을 찍는데 셀카모드를 찍는동안 확인할 수 없다. 시간차가 있는 것으로 보아 전후면 각각 한장씩 총 두장의 사진을 연속으로 찍어 합성하는 모양이다. 그리고 찍을때마다 문구가 다르게 출력되는데 (좋은 하루 되세요 등) 얼굴이 인식되지 않으면 '친구들은 당신의 얼굴을 보는 것을 좋아할거예요' 문구를 출력하는 것 같다. 
+
+<Example>
+
+<img alt="example screenshot" src="https://user-images.githubusercontent.com/60145951/171031505-0466417f-ebdf-4999-9141-cce3a30642fb.png" width=400>
+
+
+</Example>
+</Block>
+
+<Block>
+
+#### 발견
+애석하게도 연락처에서 비리얼 유저를 찾지 못했는데, `발견`탭을 제공한다. 
+
+<Example>
+
+<img alt="example screenshot" src="https://user-images.githubusercontent.com/60145951/171031797-a991ad81-e5f4-4d5f-bef3-88f2a3d8a1b2.png" width=400>
+
+</Example>
+</Block>
+
+<Block>
+
+#### 총평
+> 잘 만든 앱이지만 유명인들 중심으로 운영되는 인스타그램에 비해 내 주변사람만 볼 수 있다는 점에서 유저층이 확실히 갈릴 것 같다. 앞으로의 운영 방향을 주시하자.
 
 
 - [ref: 스여일삶 인스타그램](https://www.instagram.com/p/CeLfxqCjxyW/?igshid=YmMyMTA2M2Y=)
 - [ref: 중앙일보](https://www.joongang.co.kr/article/25066295#home)
 
-<Example>
-|앱스토어 리뷰|앱 설명|
-|:-:|:-:|
-|![image](https://user-images.githubusercontent.com/60145951/171029687-cf040e92-a4c2-42e6-9275-4325ebb491e1.png)||![image](https://user-images.githubusercontent.com/60145951/171029860-f3796ea5-42f7-4610-9432-19815400dc2e.png)|
-
-
-
-</Example>
 </Block>
