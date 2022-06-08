@@ -654,7 +654,7 @@ vuepress에서 PWA 플러그인을 설치할 때 PWA에는 Service Worker가 있
 
 MVP는 린스타트업 기법에서 고객 검증을 위한 최소한의 모델이다. 린스타트업의 철학을 실천하기 위해 지켜야 할 원칙은 첫째, MVP 를 만들 것. 둘째, 얼리반젤리스트를 찾을 것. 셋째, Build Measure Learn의 반복; 아이디어가 완벽하지 않아도 빨리 상품으로 만들고 고객으로부터 배울 것.
 
-얼리반젤리스트는 초기 사업 단계에서 가장 중요한 고객이다. 조금 부족하더라도 제품에 내재된 가치를 보고 기꺼이 구입하는 사람들이며, 이들이 주위 사람들에게 좋은 소식을 전파하기도 한다.
+얼리반젤리스트는 모험적인 고객으로 초기 사업 단계에서 가장 중요한 고객층이다. 조금 부족하더라도 제품에 내재된 가치를 보고 기꺼이 구입하는 사람들이며, 이들이 주위 사람들에게 좋은 소식을 전파하기도 한다.
 제품의 비전을 보고 구입하는 사람들이니, 반드시 이들을 위한 할인 및 혜택을 준비해야 한다.
 
 - [ref: 스여일삶 인스타그램](https://www.instagram.com/p/CeLfxqCjxyW/?igshid=YmMyMTA2M2Y=)
@@ -670,6 +670,48 @@ MVP는 린스타트업 기법에서 고객 검증을 위한 최소한의 모델�
 3. 확장성 있는 고객 : 제품/서비스에 관심이 있으며, 문제 해결을 위해 구매를 한다. 정가 구매하고 대량 구매시 할인/협상이 필요할 수 있다. 모든 제품/서비스의 구매가 가능하며 표준화된 세일즈 프로세스가 필요하다. 또한 경쟁사에 대비해야 한다.
 4. 주 고객: 완전한 제품을 구매한다.(MVP나 프로토타입을 구매하지 않는다) 정가로 구매하고, 대량 구매시 할인/협상이 필요할 수 있다. 모든 제품/서비스의 구매가 가능하며 표준화된 세일즈 프로세스가 필요하다. 또한 경쟁사에 대비해야 한다.
 (From Steve Blank)
+
+</Example>
+</Block>
+
+
+<Block>
+
+###  JS 토막상식 (6/8)
+
+<Example>
+</Example>
+</Block>
+
+<Block>
+
+#### helper function
+함수의 설명서 (python의 help) 를 확인하고 싶어서 helper function을 검색해보았는데, JS에서 헬퍼함수는 함수 안에서 호출되는 또다른 함수라고 한다. [[출처](https://velog.io/@sungjun-jin/JavaScript-Functions#:~:text=Stranger-,Helper%20Functions,%EB%A5%BC%20Helper%20Function%EC%9D%B4%EB%9D%BC%EA%B3%A0%20%ED%95%9C%EB%8B%A4.)]
+
+<Example>
+</Example>
+</Block>
+
+<Block>
+
+#### Function.prototype
+console에 `{함수명}.prototype` 을 실행하면 함수의 method를 비롯한 구성요소를 확인할 수 있다.
+
+<Example>
+
+<img width="477" alt="image" src="https://user-images.githubusercontent.com/60145951/172458086-85bb6171-635b-46ea-8216-ea91f6476372.png">
+
+</Example>
+</Block>
+
+<Block>
+
+#### === 과 ==의 차이 : 자료형
+`===`는 자료형이 같은지까지 판별하며 `==`는 값이 같은지 판별한다.
+
+<Example>
+
+<img width="233" alt="image" src="https://user-images.githubusercontent.com/60145951/172463812-ab825b5e-09aa-4899-b526-d69809bb3251.png">
 
 </Example>
 </Block>
