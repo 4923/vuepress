@@ -715,3 +715,46 @@ console에 `{함수명}.prototype` 을 실행하면 함수의 method를 비롯�
 
 </Example>
 </Block>
+
+###  JS 토막상식 2 (6/9)
+
+<Example>
+</Example>
+</Block>
+
+<Block>
+
+#### 템플릿 문자열
+문자열 안에 변수와 함수 또는 연산을 섞어 쓰는 방식
+
+백틱으로 문자열을 감싼다.
+달러기호를 앞에 붙이고 문자열 안에 포함시키고 싶은 내용 (e.g. 변수, 함수 등) 을 중괄호로 감싼다.
+console.log(이렇게 작성하고 ${변수}나 ${함수}를 추가한다.)
+
+<Example>
+
+```js
+let numbering = 14;
+let expansionPack = 5;
+
+console.log("Endwalker is a " + expansionPack + "th expansion pack of final fantasy " + numbering);
+console.log(`Endwalker is a ${expansionPack}th expansion pack of final fantasy ${numbering}`);
+```
+
+</Example>
+</Block>
+
+<Block>
+
+#### JS의 특별한 자료형: null, undefined
+`${null} 과 ${undefined}은 값이 없음을 표현하는 자료형이다.`
+
+<Example>
+
+- null은 명시적인 값이며 undefined는 상태라는 차이점이 있다.
+    - null은 값이 없음을 표현하기 위한 값이며
+    - undefined는 실행 시 값이 없을때 나타나는 결과다. 아마도 null이 0, undefined가 None이 아닐까?
+
+
+</Example>
+</Block>
