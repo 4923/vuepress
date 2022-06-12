@@ -761,7 +761,7 @@ console.log(`Endwalker is a ${expansionPack}th expansion pack of final fantasy $
 
 <Block>
 
-#### [TEU MED 2: Innovation Day] 시장성과 솔루션, 문제정의 (6/11)
+### [TEU MED 2: Innovation Day] 시장성과 솔루션, 문제정의 (6/11)
 
 TEU MED 이노베이션 데이를 진행하고 온 날이다. 많은 인사이트를 얻은 동시에 아쉬움을 안기도 했다. 피봇을 여러번 한 만큼 MVP 개발에 있어 준비가 충분하지 못했고 개발자로서 타협해야 할 점이 많았다.
 
@@ -780,7 +780,7 @@ TEU MED 이노베이션 데이를 진행하고 온 날이다. 많은 인사이�
 <Block>
 
 
-#### Dead Code (6/12)
+### Dead Code (6/12)
 
 프로그래밍 언어 문법 기초가 늘 그렇듯 다른 언어와 공유하는 부분이 많아서 중복되는 부분은 상식으로 넘겨듣고 있다.  
 다만 흥미로운 부분은 `Dead Code` 라는 용어인데, 함수의 `return`이 값을 반환하는 것 외에도 함수를 종료하는 의미를 가지고 있어, 그 return 아래에 적힌 실행문은 절대 실행되지 않는다. 이 때 해당 실행문을 죽었다는 의미로 `Dead Code`라고 말한다.
@@ -794,9 +794,68 @@ TEU MED 이노베이션 데이를 진행하고 온 날이다. 많은 인사이�
 
 <Block> 
 
+### Pose Estimate, 또는 HPE (6/13)
+
+" TEU MED 2기 프로젝트 'watch your neck' 개발 중 발견한 용어를 정리한다.
+
+Pose Detection으로 막연히 알고 있었던 Pose Estimate는 HPE (Human Pose Estimate) 로도 불리는 Computer Vision의 유명한 과제 중 하나다.
+HPE의 주요한 과제는 `이미지나 비디오에서 사람의 관절 또는 부위를 예측하는 것` 으로, 이를 통해 사람의 행동을 인식한다.
+
+- [주요참고: Human Pose Estimation Ultimate Overview in 2022](https://supermemi.tistory.com/151)
+
 
 <Example>
 
+<img width = 400 src = "https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FRN09S%2FbtryiGn7zsj%2FdE1xQlVeWMvsQAmK4zkpK0%2Fimg.png">
+
+</Example>
+</Block>
+
+<Block>
+
+#### Pose Estimate 의 방법론
+
+일반적으로 다음의 순서를 따른다
+
+- 하나, `semantic key points` 를 검출한다.
+- 둘, key points 사이의 상관관계, 연관성을 추론한다.
+- 셋, 위 과정을 반복하여 지속적으로 자세를 추적한다. 단, 실시간 영상에서 이를 추적하기 위해서는 상당한 컴퓨팅 자원이 필요하다.
+
+사람의 형태와 관절이 결국 중요한데 이를 추출하기 위한 방법은 아래 두가지로 나뉜다.
+
+1. bottom up 방식: 이미지에서 관절로 추정되는 부분을 추출해 이어붙여 사람 형태를 만든다.
+2. top down 방식: 이미지에서 사람의 형체를 분리해 관절을 추출한다.
+
+</Block>
+<Example>
+
+
+</Example>
+</Block>
+
+<Block>
+
+
+#### Pose Estimate 의 발전
+
+기존에는 bounding box를 통해 사람이 위치하는 모든 공간을 분리했다면 현재는 pose detection을 통해 사람의 움직임을 더욱 더 '구체적'으로 이해할 수 있게 되었다.
+
+##### 2D Pose estimate
+- spatial location을 추정하는데 이 때 전통적인 방식의 feature extraction을 사용한다. 상당히 발전이 이루어진 영역으로 CNN을 기반으로 구축된 라이브러리에는 `Open Pose`, `CPV`, `Alpha Pose`, `HRNA` 등이 있다.
+##### 3D Pose estimate
+다양한 각도의 이미지 또는 추가 센서 (IMU, LiDAR 등) 을 통해 삼차원으로 사람의 행동을 인지하고 데이터화 하는데 다방면으로 사람을 이해하므로 발전될 경우 사람의 행동까지 예측할 수 있게 된다. 그러나, annotation에는 여전히 어려움이 있다.
+
+모델에는 다음 세가지 방법론이 존재한다.
+
+1. Kinematic Model : skeleton-based model
+2. Planar Model : contour-based model
+3. Volumetirc model : 3D pose estimation
+
+
+
+<Example>
+
+<img width = 400 src ="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2FdFNvfS%2Fbtryd2rR9KM%2FEYPELAeu7eVph7UjBQmSV0%2Fimg.png">
 
 </Example>
 </Block>
