@@ -890,7 +890,7 @@ TEU 팀의 기존 아이디어가 바이오마커 탐색을 통한 예후분석 
 
 <Block>
 
-### Generic in JS
+### Generic in JS (6/22)
 
 새 언어를 배울 때 가장 즐거운건 언어의 체계를 익히는 것이다. 그래서 공식문서를 즐겨읽고 레퍼런스를 따라가는 과정을 좋아하는데 자바스크립트는 도무지 체계가 머리에 잡히지 않아 골머리를 앓고 있다.
 
@@ -926,6 +926,47 @@ const text = longText<string>("Hello Generic");
 
 
 
+
+</Example>
+</Block>
+
+
+<Block>
+### OpenPose는 공식적으로 Ubuntu와 Windows만 지원한다. (6/24)
+
+> [Docs](https://github.com/CMU-Perceptual-Computing-Lab/openpose#quick-start-overview)
+
+윈도우를 쓸때엔 윈도우를 지원하지 않는 khaiii 를 설치한다고 애를 먹었었는데 맥으로 옮겨오니 openpose가 mac을 지원하지 않는다고 한다. 도커가 있긴 하지만 아직 다루는데 미숙하므로 누군가가 마련해둔 맥용 설치 가이드를 따랐다. ([2020 ver](https://www.thomasvanhoey.com/post/installing-openpose-on-mac-october-2020-version/))
+
+- 1 `OpenPose`는 Caffe와 OpenCV 를 기반으로 하는 Bottom Up 방식의 영상처리 라이브러리다. 
+- 2 `Caffe`는 Berkeley Vision and Learning Center (BVLC) 에서 개발한 최초의 딥러닝 라이브러리다. Python 인터페이스를 가지고 있으나 기본적으로 CPP 라이브러리이므로 CNN으로 이루어져 있다. 
+- 3 따라서 OpenPose를 사용하기 위해서는 아래 단계를 통해 caffe와 opencv를 설치해야한다.
+    
+    ```bash
+    $ brew install caffe  
+    $ brew install --cask cmake
+    $ pip install opencv-python
+    ```
+
+    - caffe 설치는 상당히 오래 걸리니 주의
+- 4 종속성을 설치하고 CMake GUI를 통해 공식문서에서 지시하는 내용을 수행한다.
+    
+    ``` bash
+    # 종속성 설치
+    bash 3rdparty/osx/install_deps.sh
+
+    # CMake GUI 실행
+    cd /Applications
+    open CMake.app
+    ```
+- 5 프로젝트 빌드
+
+이제 OpenPose를 실행할 수 있다.
+
+<Example>
+<img src="https://user-images.githubusercontent.com/60145951/175646296-effb4a15-ae9f-47f9-8b01-042f8597a210.png" width=600></img>
+
+얼굴선을 이렇게까지 선명하게 검출한다면 얻을 수 있는 데이터가 많을 것 같다. 그런데 이거 외국 블로그인데 웬 빅스가...
 
 </Example>
 </Block>
