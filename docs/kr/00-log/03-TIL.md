@@ -970,3 +970,20 @@ const text = longText<string>("Hello Generic");
 
 </Example>
 </Block>
+
+<Block>
+
+### MS COCO Dataset (6/25)
+
+> [COCO](https://cocodataset.org/#home)
+
+- object detection
+- segmentation
+- keypoint detection
+
+위 작업을 위한 CV용 데이터셋으로 현재 무료로 풀려있으며 CV 모델의 성능평가에 많이 사용되는 것을 확인할 수 있다. 공식페이지에서 다운로드 받으면 이미지를 받아볼수 있으며 annotation된 결과는 json 파일을 보면 관련 정보를 확인할 수 있다. 
+
+<Example>
+
+</Example>
+</Block>
