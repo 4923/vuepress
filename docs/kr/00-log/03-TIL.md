@@ -987,3 +987,18 @@ const text = longText<string>("Hello Generic");
 
 </Example>
 </Block>
+
+<Block>
+
+### OpenPose 빌드 삽질기 (MacOS, 6/26)
+
+길어진 삽질기는 [여기](https://github.com/4923/Pochade/tree/master/canvas/Human-Pose-Estimate/open-pose)에 올린다. 
+- cmake 를 할 때마다 골머리를 앓는데 이건 어디서 공부해야 하는건지 어질어질하다.
+- python 으로 binding 하는 라이브러리: pybind11 의 일반적인 사용법을 좀 알아두자.
+- import 까지만 되면 일단 개발환경 세팅은 완료!
+
+
+<Example>
+
+</Example>
+</Block>
