@@ -1002,3 +1002,36 @@ const text = longText<string>("Hello Generic");
 
 </Example>
 </Block>
+
+<Block>
+
+### OpenPose 테스트 성공 (MacOS, 6/27)
+
+우선 파이썬에서 import 하는건 성공했다. base에서는 할 수 있는데 다른 가상환경으로 넘어가면 설치가 안돼서 콘다 가상환경 경로로 올라가 수동으로 파일들을 옮겨봤으나... 
+
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/60145951/175960839-bb4ce367-4227-4f64-94df-fe910c9f7522.png">
+
+별 소득이 없었다. base에서라도 돼서 다행이라고 해야할까?
+
+<img width="600" alt="image" src="https://user-images.githubusercontent.com/60145951/175960695-8fa94ee9-9a32-4181-8407-9be654439f3f.png">
+
+pybind11로 생성된 python/ 이하 폴더들을 확인해보면 `__init__.py` 에 재귀적으로 pyopenpose를 호출하게 되어있고 그래서 호출시 오류가 발생하는거같은데 뭐가 문제인지 잘 모르겠다. 
+
+우선 테스트 파일을 돌렸을 때 (`openpose/build/examples/tutorial_api_python/01_body_from_image.py`)
+
+<img width="1604" alt="image" src="https://user-images.githubusercontent.com/60145951/175961312-0f3d9afb-218d-4e4d-8079-7ce876d8354b.png">
+
+아래 키포인트를 잡는것을 확인했다. 우려되는 점은 
+
+```t
+src/tcmalloc.cc:333] Attempt to free invalid pointer 0x600002ab8440
+[1]    11123 abort      python3 01_body_from_image.py
+```
+
+이러고 끝난다는건데 뭐가 abort 된건진 다른 코드들을 살펴보면 알 것 같다.  빌드만 하면 이렇게 쉽게 끝나는데... 빌드에 사흘이나 썼다니 믿을수가 없다. cmake 사용방법을 반드시 익혀야겠다.
+
+
+<Example>
+
+</Example>
+</Block>
